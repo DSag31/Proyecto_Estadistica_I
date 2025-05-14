@@ -1,0 +1,12 @@
+Como podemos ver, en esta ocasión tenemos diferentes carpetas las cuales tienen un contenido importante para poder realizar un análisis estadístico que conrespecta al tema de desapariciones
+
+La Carpeta "Victimas_Confllicto_Armado_Datos" contiene el archivo .parquet el cual se hace necesario que lo muevas a el disco local C:\ esto a motivo de que el archivo requiere permisos de administrador para poder ser ejecutado o leido por el archivo R que se encuentra en la carpeta R
+
+
+
+La "Carpeta R" contiene archivos R
+	Eliminar Columnas de un parquet: Este archivo R modifica y guarda un nuevo archivo para su respectiva ejecucion
+
+
+
+	Ejecucion_de_parquet: el cual al realizar su ejecucion (Teniendo previamente el archivo .parquet en el disco local C) nos deberia 	mostrar algunas caracteristicas sobre este archivo

@@ -1,0 +1,1 @@
+ctrl + alt + i ; Genera una sección para escribir usando un lenguaje de programación
