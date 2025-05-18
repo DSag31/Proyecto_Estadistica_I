@@ -283,7 +283,7 @@ ggplot(map_data) +
 
 ##################################Pregunta 4#########################################################
 #¿Qué registros de municipios (en Colombia ) principalmente están afectados  (mínimo 5)?
-
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 # 1. Asegurar tipo numérico
 datos <- datos %>%
   mutate(muni_code_hecho = as.numeric(muni_code_hecho))
