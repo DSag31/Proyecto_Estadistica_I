@@ -1,9 +1,14 @@
 #install.packages(c("arrow", "dplyr", "ggplot2"))
+# Instalar librerías si hace falta
+install.packages(c("arrow","dplyr","ggplot2","readr","sf", "tidyr", "RColorBrewer"))  # si no se tienen
+# Cargar librerías importantes
 library(arrow)
 library(dplyr) #Util para eliminar columnas
 library(ggplot2) # para graficar
 library(readr)
-
+library(sf) 
+library(tidyr)    
+library(RColorBrewer)  # para paletas extra
 ##################################Pregunta 1#########################################################
 #Análisis del número de afectados entre los años 1985 a 2018 (homicidios)
 #Gráfica : Histograma.
@@ -58,17 +63,6 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
 ##################################Pregunta 2#########################################################
 
 #Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos
-
-# Instalar librerías si hace falta
-install.packages(c("sf", "tidyr", "RColorBrewer"))  # si no se tienen
-# Cargar librerías
-library(arrow)    
-library(dplyr)    
-library(sf)       
-library(ggplot2)  
-library(tidyr)    
-library(RColorBrewer)  # para paletas extra
-
 # 1. Lee los datos de homicidios y cuenta por departamento
 df_hom <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
