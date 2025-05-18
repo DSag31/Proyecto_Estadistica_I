@@ -323,6 +323,27 @@ ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y 
 #De que edad a que edad han estado las personas mas afectadas (mayor frecuencia absoluta del intervalo)
   #a. la infancia van de 0 a 14, los adolescentes de 15 a 19,  adultez desde los 20 en adelante
 
+# Contar la frecuencia absoluta de cada categoría de edad
+conteo_edades <- df_hom %>%
+  count(edad_categoria, sort = TRUE)
+
+# Ver las primeras filas para encontrar la categoría con más homicidios
+print(conteo_edades)
+
+# Si deseas mostrar solo la categoría más frecuente (el modo)
+edad_mas_afectada <- conteo_edades %>%
+  slice_max(n, n = 1)
+
+print(edad_mas_afectada)
+
+ggplot(conteo_edades, aes(x = reorder(edad_categoria, -n), y = n)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  labs(title = "Frecuencia de homicidios por categoría de edad",
+       x = "Rango de Edad",
+       y = "Cantidad de Homicidios") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 ##################################Pregunta 6#########################################################
 #Que tipo de etnias existen y cuales han sido las más afectadas
   #a. Cuantos casos estan asociados con desplazamiento forzado (relacion de la columna is_forced_dis)
