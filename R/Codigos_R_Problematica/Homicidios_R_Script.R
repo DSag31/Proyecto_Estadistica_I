@@ -424,21 +424,18 @@ ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
   ) +
   theme_minimal()
 ##################################Pregunta 8#########################################################
-#¿Años en que mister violencia afecto mas a estas comunidades? cual fue el año que en teoria existio mas tranquilidad entre los ciudadanos
-
-##################################Pregunta 9#########################################################
 #En un promedio general, que se ven mas afectados, los hombres o las mujeres?
 
+##################################Pregunta 9#########################################################
+#¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos )
+
 ##################################Pregunta 10#########################################################
-#¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos ) 
+ #¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
 
 ##################################Pregunta 11#########################################################
-#¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
-
-##################################Pregunta 12#########################################################
 #¿La distribución de las edades esta sesgada mas a la parte de jóvenes o adultos?
 
-##################################Pregunta 13#########################################################
+##################################Pregunta 12#########################################################
 #Si conviertes edad categoría a numérica, ¿cuál es la edad promedio de las víctimas?
   #a. en promedio, que edades han sido afectadas
   #b. cual es la edad más afectada (moda)
