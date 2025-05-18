@@ -57,6 +57,7 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
   )
 ##################################Pregunta 2#########################################################
 
+#Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos
 
 # Instalar librerías si hace falta
 install.packages(c("sf", "tidyr", "RColorBrewer"))  # si no se tienen
