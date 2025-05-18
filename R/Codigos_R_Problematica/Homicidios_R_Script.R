@@ -151,7 +151,7 @@ ggplot(map_data) +
     plot.subtitle = element_text(size = 12, hjust = 0.5),
     legend.position = "right"
   )
-
+##################################Pregunta 3#########################################################
 
 
 
