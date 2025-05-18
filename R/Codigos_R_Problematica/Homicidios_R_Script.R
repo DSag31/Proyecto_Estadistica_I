@@ -7,7 +7,7 @@ library(ggplot2) # para graficar
 #Gráfica : Histograma.
 
 # 1. Leer el archivo Parquet de homicidios
-df_hom <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet") 
+df_hom <- read_parquet("C:/datosLimpios/datosLimpios-homicidio-R100.parquet") 
 
 # 2. Filtrar el rango de años de interés y contar víctimas por año
 df_por_ano <- df_hom %>%

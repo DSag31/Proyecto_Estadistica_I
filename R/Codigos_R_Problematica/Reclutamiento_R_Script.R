@@ -6,7 +6,7 @@ library(ggplot2) # para graficar
 #Gráfica : Histograma.
 
 # 1. Leer el archivo Parquet de Reclutamiento
-df_Rec <- read_parquet("C:/Users/David/Downloads/dataProyect/datos_filtrados_reclutamiento.parquet") 
+df_Rec <- read_parquet("C:/Datos_limpios/datos_filtrados_reclutamiento.parquet") 
 
 # 2. Filtrar el rango de años de interés y contar víctimas por año
 df_por_ano <- df_Rec %>%
