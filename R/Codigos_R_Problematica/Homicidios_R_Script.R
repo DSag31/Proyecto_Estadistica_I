@@ -61,7 +61,6 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
     panel.grid.minor = element_blank()
   )
 ##################################Pregunta 2#########################################################
-
 #Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos
 # 1. Lee los datos de homicidios y cuenta por departamento
 df_hom <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
@@ -147,7 +146,7 @@ ggplot(map_data) +
     legend.position = "right"
   )
 ##################################Pregunta 3#########################################################
-
+#¿Qué tal está la situación de Bucaramanga? (mapa de calor de los municipios de santander, enfocándonos en la región de santander)
 
 
 
@@ -191,27 +190,36 @@ ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y 
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ##################################Pregunta 5#########################################################
-
+#De que edad a que edad han estado las personas mas afectadas (mayor frecuencia absoluta del intervalo)
+  #a. la infancia van de 0 a 14, los adolescentes de 15 a 19,  adultez desde los 20 en adelante
 
 ##################################Pregunta 6#########################################################
-
-
+#Que tipo de etnias existen y cuales han sido las más afectadas
+  #a. Cuantos casos estan asociados con desplazamiento forzado (relacion de la columna is_forced_dis)
 ##################################Pregunta 7#########################################################
+#¿Qué guerrilla es la que está afectando más a estos ciudadanos?
 
 
 ##################################Pregunta 8#########################################################
-
+#¿Años en que mister violencia afecto mas a estas comunidades? cual fue el año que en teoria existio mas tranquilidad entre los ciudadanos
 
 ##################################Pregunta 9#########################################################
-
+#En un promedio general, que se ven mas afectados, los hombres o las mujeres?
 
 ##################################Pregunta 10#########################################################
-
+#¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos ) 
 
 ##################################Pregunta 11#########################################################
-
+#¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
 
 ##################################Pregunta 12#########################################################
-
+#¿La distribución de las edades esta sesgada mas a la parte de jóvenes o adultos?
 
 ##################################Pregunta 13#########################################################
+#Si conviertes edad categoría a numérica, ¿cuál es la edad promedio de las víctimas?
+  #a. en promedio, que edades han sido afectadas
+  #b. cual es la edad más afectada (moda)
+  #c. varianza y desviacion estandar
+  #d. Aplicando los cuartiles, ¿que podemos deducir?
+  #e. y su sesgo?
+  #f. que hay de su kurtosis?
