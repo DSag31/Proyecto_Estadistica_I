@@ -14,21 +14,21 @@ library(RColorBrewer)  # para paletas extra
 #Gráfica : Histograma.
 
 # 1. Leer el archivo Parquet de homicidios
-df_hom <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet") 
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet") 
 
 # 2. Filtrar el rango de años de interés y contar víctimas por año
-df_por_ano <- df_hom %>%
+df_por_ano <- datos %>%
   filter(yy_hecho >= 1985, yy_hecho <= 2018) %>%
   group_by(yy_hecho) %>%
   summarise(n_victimas = n(), .groups = "drop")
 
 
-# df_hom %>%:
+# datos %>%:
 # Inicia una secuencia de comandos usando el operador pipe (%>%),
 # que permite leer y aplicar comandos en orden.
 
 # filter(yy_hecho >= 1985, yy_hecho <= 2018):
-# Filtra los registros del DataFrame df_hom.
+# Filtra los registros del DataFrame datos.
 # 
 # - Condición: Solo mantiene las filas donde el año (yy_hecho) 
 #   está entre 1985 y 2018.
@@ -63,9 +63,9 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
 ##################################Pregunta 2#########################################################
 #Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos
 # 1. Lee los datos de homicidios y cuenta por departamento
-df_hom <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
+ddatos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
-casos_dept <- df_hom %>%
+casos_dept <- datos %>%
   mutate(dept_code_hecho = sprintf("%02d", as.integer(dept_code_hecho))) %>%
   group_by(dept_code_hecho) %>%
   summarise(n_victimas = n(), .groups = "drop")
@@ -285,11 +285,11 @@ ggplot(map_data) +
 #¿Qué registros de municipios (en Colombia ) principalmente están afectados  (mínimo 5)?
 
 # 1. Asegurar tipo numérico
-df_hom <- df_hom %>%
+datos <- datos %>%
   mutate(muni_code_hecho = as.numeric(muni_code_hecho))
 
 # 2. Top 5 municipios con más homicidios
-top_municipios <- df_hom %>%
+top_municipios <- datos %>%
   group_by(muni_code_hecho) %>%
   summarise(total_homicidios = n()) %>%
   arrange(desc(total_homicidios)) %>%
@@ -324,7 +324,7 @@ ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y 
   #a. la infancia van de 0 a 14, los adolescentes de 15 a 19,  adultez desde los 20 en adelante
 
 # Contar la frecuencia absoluta de cada categoría de edad
-conteo_edades <- df_hom %>%
+conteo_edades <- datos %>%
   count(edad_categoria, sort = TRUE)
 
 # Ver las primeras filas para encontrar la categoría con más homicidios
