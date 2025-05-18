@@ -53,3 +53,18 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
     panel.grid.minor = element_blank()
   )
+
+
+
+
+s
+s
+s
+s
+
+s
+s
+s
+s
+ss
+s
