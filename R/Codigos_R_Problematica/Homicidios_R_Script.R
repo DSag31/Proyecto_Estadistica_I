@@ -400,8 +400,29 @@ ggplot(conteo_etnias, aes(x = reorder(etnia, -n), y = n, fill = etnia)) +
   #a. Cuantos casos estan asociados con desplazamiento forzado (relacion de la columna is_forced_dis)
 ##################################Pregunta 7#########################################################
 #¿Qué guerrilla es la que está afectando más a estos ciudadanos?
+# 1. Leer datos
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
+# 2. Contar casos por guerrilla (columna p_str)
+conteo_guerrilla <- datos %>%
+  filter(!is.na(p_str) & p_str != "") %>%
+  count(p_str, sort = TRUE)
 
+# 3. Mostrar tabla con conteo total por guerrilla
+print(conteo_guerrilla)
+
+# 4. Graficar top 10 guerrillas que más afectan (por número de casos)
+top10_guerrilla <- head(conteo_guerrilla, 10)
+
+ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  labs(
+    title = "Guerrillas que más afectan a los ciudadanos",
+    x = "Guerrilla",
+    y = "Número de casos"
+  ) +
+  theme_minimal()
 ##################################Pregunta 8#########################################################
 #¿Años en que mister violencia afecto mas a estas comunidades? cual fue el año que en teoria existio mas tranquilidad entre los ciudadanos
 
