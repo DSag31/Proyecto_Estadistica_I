@@ -7,10 +7,10 @@ library(ggplot2) # para graficar
 #Gráfica : Histograma. 
 
 # 1. Leer el archivo Parquet de secuestro
-df_sec <- read_parquet("C:/datosLimpios/datosLimpios-secuestro-R100.parquet") #Leemos el archivo el cual queremos modificar 
+datos <- read_parquet("C:/datosLimpios/datosLimpios-secuestro-R100.parquet") #Leemos el archivo el cual queremos modificar 
 
 # 2. Filtrar el rango de años de interés y contar víctimas por año
-sc_por_ano <- df_sec %>%
+sc_por_ano <- datos %>%
   filter(yy_hecho >= 1985, yy_hecho <= 2018) %>%
   group_by(yy_hecho) %>%
   summarise(n_victimas = n(), .groups = "drop")
