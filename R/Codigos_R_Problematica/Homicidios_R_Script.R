@@ -58,20 +58,3 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
 
 
 
-
-sss
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-
-
-hola
-
-
