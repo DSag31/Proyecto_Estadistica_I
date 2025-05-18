@@ -1,6 +1,6 @@
 #install.packages(c("arrow", "dplyr", "ggplot2"))
 # Instalar librerías si hace falta
-install.packages(c("arrow","dplyr","ggplot2","readr","sf", "tidyr", "RColorBrewer"))  # si no se tienen
+install.packages(c("arrow","dplyr","ggplot2","readr","sf", "tidyr", "RColorBrewer","kableExtra","scales","knitr"))  # si no se tienen
 # Cargar librerías importantes
 library(arrow)
 library(dplyr) #Util para eliminar columnas
@@ -9,6 +9,9 @@ library(readr)
 library(sf) 
 library(tidyr)    
 library(RColorBrewer)  # para paletas extra
+library(kableExtra)
+library(scales)
+library(knitr)
 ##################################Pregunta 1#########################################################
 #Análisis del número de afectados entre los años 1985 a 2018 (homicidios)
 #Gráfica : Histograma.
@@ -346,6 +349,54 @@ ggplot(conteo_edades, aes(x = reorder(edad_categoria, -n), y = n)) +
 
 ##################################Pregunta 6#########################################################
 #Que tipo de etnias existen y cuales han sido las más afectadas
+# 1. Leer los datos
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
+
+# 2. Agrupar por etnia y calcular porcentaje preciso
+conteo_etnias <- datos %>%
+  filter(!is.na(etnia) & etnia != "") %>%
+  count(etnia, sort = TRUE) %>%
+  mutate(
+    porcentaje = n / sum(n),
+    etiqueta = paste0(etnia, " (", percent(porcentaje, accuracy = 0.001), ")")  # Precisión de 0.001%
+  )
+
+# 3. Tabla de resumen con porcentaje con 3 decimales
+tabla_etnias <- conteo_etnias %>%
+  mutate(porcentaje = round(porcentaje * 100, 3)) %>%
+  rename(
+    "Grupo Étnico" = etnia,
+    "Número de Homicidios" = n,
+    "Porcentaje (%)" = porcentaje
+  )
+
+# Mostrar tabla en consola
+kable(tabla_etnias, format = "markdown", align = "c")
+
+# 4. Diagrama de pastel con etiquetas precisas
+ggplot(conteo_etnias, aes(x = "", y = n, fill = etnia)) +
+  geom_col(width = 1, color = "white") +
+  coord_polar(theta = "y") +
+  geom_text(aes(label = etiqueta), position = position_stack(vjust = 0.5), size = 3) +
+  labs(
+    title = "Distribución de homicidios por grupo étnico (Pastel)",
+    fill = "Etnia"
+  ) +
+  theme_void() +
+  theme(legend.position = "none")
+
+# 5. Diagrama de barras con porcentaje más exacto
+ggplot(conteo_etnias, aes(x = reorder(etnia, -n), y = n, fill = etnia)) +
+  geom_col() +
+  geom_text(aes(label = percent(porcentaje, accuracy = 0.001)), vjust = -0.5) +
+  labs(
+    title = "Número de homicidios por grupo étnico (Barras)",
+    x = "Grupo Étnico",
+    y = "Número de Homicidios"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  ylim(0, max(conteo_etnias$n) * 1.1)
   #a. Cuantos casos estan asociados con desplazamiento forzado (relacion de la columna is_forced_dis)
 ##################################Pregunta 7#########################################################
 #¿Qué guerrilla es la que está afectando más a estos ciudadanos?
