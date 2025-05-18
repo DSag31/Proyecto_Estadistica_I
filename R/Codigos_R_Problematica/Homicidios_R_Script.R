@@ -425,6 +425,26 @@ ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
   theme_minimal()
 ##################################Pregunta 8#########################################################
 #En un promedio general, que se ven mas afectados, los hombres o las mujeres?
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet"
+
+#Contar homicidios por sexo
+conteo_sexo <- datos %>%
+  count(sexo)
+
+#Calcular porcentaje para cada grupo
+conteo_sexo <- conteo_sexo %>%
+  mutate(porcentaje = round(100 * n / sum(n), 1),
+         etiqueta = paste0(sexo, " (", porcentaje, "%)"))
+
+#Crear gráfico de pastel con ggplot2
+ggplot(conteo_sexo, aes(x = "", y = n, fill = sexo)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y") +
+  labs(title = "Proporción de homicidios por sexo") +
+  theme_void() +  # Elimina ejes y fondo
+  geom_text(aes(label = etiqueta), position = position_stack(vjust = 0.5)) +
+  scale_fill_manual(values = c("HOMBRE" = "steelblue", "MUJER" = "salmon"))
+
 
 ##################################Pregunta 9#########################################################
 #¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos )
