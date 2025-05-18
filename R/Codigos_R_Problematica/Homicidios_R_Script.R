@@ -3,7 +3,7 @@ library(arrow)
 library(dplyr) #Util para eliminar columnas
 library(ggplot2) # para graficar
 
-#Análisis del número de afectados entre los años 1985 a 2018 (homicidios, secuestros, desapariciones y reclutamiento). 
+#Análisis del número de afectados entre los años 1985 a 2018 (homicidios)
 #Gráfica : Histograma.
 
 # 1. Leer el archivo Parquet de homicidios
