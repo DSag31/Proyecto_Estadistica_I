@@ -55,3 +55,152 @@ ggplot(sc_por_ano, aes(x = yy_hecho, y = n_victimas)) +
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
     panel.grid.minor = element_blank()
   )
+
+################################# ANALISIS 2 ################################
+# MAPA DE CALOR SECUESTROS 
+
+# Instalar librerías si hace falta
+install.packages(c("sf", "tidyr", "RColorBrewer"))  # si no se tienen
+
+# Cargar librerías
+library(arrow)    
+library(dplyr)    
+library(sf)       
+library(ggplot2)  
+library(tidyr)    
+library(RColorBrewer)
+
+# 1. Lee los datos de homicidios y cuenta por municipio
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-secuestro-R100.parquet")
+
+casos_mun <- datos %>%
+  mutate(muni_code_hecho = sprintf("%05d", as.integer(muni_code_hecho))) %>%
+  group_by(muni_code_hecho) %>%
+  summarise(n_victimas = n(), .groups = "drop")
+
+# 2. Lee la capa de municipios de Colombia y filtra solo Santander
+gdf_mun <- st_read("C:/Datos_limpios/gadm41_COL.gpkg", layer = "ADM_ADM_2") %>%
+  st_transform(4326)
+
+# Asegúrate de que en tu GPKG la columna del departamento se llame NAME_1
+gdf_santander <- gdf_mun %>%
+  filter(NAME_1 == "Santander")
+
+# 3. Diccionario nombre de municipio → código DANE de 5 dígitos
+nombre_codigos <- c(
+  "Bucaramanga"               = "68001",
+  "Aguada"                    = "68013",
+  "Albania"                   = "68020",
+  "Aratoca"                   = "68051",
+  "Barbosa"                   = "68077",
+  "Barichara"                 = "68079",
+  "Barrancabermeja"           = "68081",
+  "Betulia"                   = "68092",
+  "Bolívar"                   = "68101",
+  "Cabrera"                   = "68121",
+  "California"                = "68132",
+  "Capitanejo"                = "68147",
+  "Carcasí"                   = "68152",
+  "Cepitá"                    = "68160",
+  "Cerrito"                   = "68162",
+  "Charalá"                   = "68167",
+  "Charta"                    = "68169",
+  "Chima"                     = "68176",
+  "Chipatá"                   = "68179",
+  "Cimitarra"                 = "68190",
+  "Concepción"                = "68207",
+  "Confines"                  = "68209",
+  "Contratación"              = "68211",
+  "Coromoro"                  = "68217",
+  "Curití"                    = "68229",
+  "El Carmen de Chucurí"      = "68235",
+  "El Guacamayo"              = "68245",
+  "El Peñón"                  = "68250",
+  "El Playón"                 = "68255",
+  "Encino"                    = "68264",
+  "Enciso"                    = "68266",
+  "Florián"                   = "68271",
+  "Floridablanca"             = "68276",
+  "Galán"                     = "68296",
+  "Gámbita"                   = "68298",
+  "Girón"                     = "68307",
+  "Guaca"                     = "68318",
+  "Guadalupe"                 = "68320",
+  "Guapotá"                   = "68322",
+  "Guavatá"                   = "68324",
+  "Güepsa"                    = "68327",
+  "Hato"                      = "68344",
+  "Jesús María"               = "68368",
+  "Jordán"                    = "68370",
+  "La Belleza"                = "68377",
+  "Landázuri"                 = "68385",
+  "La Paz"                    = "68397",
+  "Lebrija"                   = "68406",
+  "Los Santos"                = "68418",
+  "Macaravita"                = "68425",
+  "Málaga"                    = "68432",
+  "Matanza"                   = "68444",
+  "Mogotes"                   = "68464",
+  "Molagavita"                = "68468",
+  "Ocamonte"                  = "68498",
+  "Oiba"                      = "68500",
+  "Onzaga"                    = "68502",
+  "Palmar"                    = "68522",
+  "Palmas del Socorro"        = "68524",
+  "Páramo"                    = "68533",
+  "Piedecuesta"               = "68547",
+  "Pinchote"                  = "68549",
+  "Puente Nacional"           = "68572",
+  "Puerto Parra"              = "68573",
+  "Puerto Wilches"            = "68575",
+  "Rionegro"                  = "68615",
+  "Sabana de Torres"          = "68655",
+  "San Andrés"                = "68669",
+  "San Benito"                = "68673",
+  "San Gil"                   = "68679",
+  "San Joaquín"               = "68682",
+  "San José de Miranda"       = "68684",
+  "San Miguel"                = "68686",
+  "San Vicente de Chucurí"    = "68689",
+  "Santa Bárbara"             = "68705",
+  "Santa Helena del Opón"     = "68720",
+  "Simacota"                  = "68745",
+  "Socorro"                   = "68755",
+  "Suaita"                    = "68770",
+  "Sucre"                     = "68773",
+  "Surata"                    = "68780",
+  "Tona"                      = "68820",
+  "Valle de San José"         = "68855",
+  "Vélez"                     = "68861",
+  "Vetas"                     = "68867",
+  "Villanueva"                = "68872",
+  "Zapatoca"                  = "68895"
+)
+
+# 4. Asigna el código DANE a cada municipio (columna NAME_2 en tu GPKG)
+gdf_santander <- gdf_santander %>%
+  mutate(muni_code_hecho = nombre_codigos[as.character(NAME_2)])
+
+# 5. Une los conteos y rellena con cero donde falte
+map_data <- gdf_santander %>%
+  left_join(casos_mun, by = "muni_code_hecho") %>%
+  replace_na(list(n_victimas = 0))
+
+# 6. Dibuja el mapa sólo de Santander, con escala invertida (rojo = más víctimas)
+ggplot(map_data) +
+  geom_sf(aes(fill = n_victimas), color = "gray80", size = 0.2) +
+  scale_fill_gradientn(
+    name     = "N° víctimas",
+    colours  = rev(rainbow(10)),  # colores invertidos, extremos rojos
+    na.value = "white"
+  ) +
+  labs(
+    title = "Mapa de calor de homicidios en municipios de Santander\n(1985–2018)"
+  ) +
+  theme_void() +
+  theme(
+    plot.title     = element_text(size = 16, face = "bold", hjust = 0.5),
+    legend.position = "right"
+  )
+
+################################# ANALISIS 3 ################################
