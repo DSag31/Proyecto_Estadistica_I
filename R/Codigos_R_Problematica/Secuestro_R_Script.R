@@ -290,3 +290,48 @@ ggplot(map_data) +
     legend.position = "right"
   )
 
+###############################  ANALISIS #4 ###########################
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-secuestro-R100.parquet")
+# 1. Asegurar tipo numérico
+datos <- datos %>%
+  mutate(muni_code_hecho = as.numeric(muni_code_hecho))
+
+# 2. Top 5 municipios con más homicidios
+top_municipios <- datos %>%
+  group_by(muni_code_hecho) %>%
+  summarise(total_homicidios = n()) %>%
+  arrange(desc(total_homicidios)) %>%
+  slice_head(n = 5)
+
+top_municipiosTotal <- datos %>%
+  group_by(muni_code_hecho) %>%
+  summarise(total_homicidios = n())
+
+# 3. Leer archivo CSV de municipios
+municipios_dane <- read_delim("C:/Datos_limpios/CodigosDaneDepartamentoMunicipio/Departamentos_Municipios.csv",
+                              delim = ";", show_col_types = FALSE)
+
+# 4. Limpiar código DANE del municipio
+municipios_dane <- municipios_dane %>%
+  mutate(`CÓDIGO DANE DEL MUNICIPIO` = gsub("\\.", "", `CÓDIGO DANE DEL MUNICIPIO`),
+         `CÓDIGO DANE DEL MUNICIPIO` = trimws(`CÓDIGO DANE DEL MUNICIPIO`),
+         `CÓDIGO DANE DEL MUNICIPIO` = as.numeric(`CÓDIGO DANE DEL MUNICIPIO`))
+
+# 5. Join para obtener nombres de municipios
+top_municipios_nombres <- top_municipios %>%
+  left_join(municipios_dane, by = c("muni_code_hecho" = "CÓDIGO DANE DEL MUNICIPIO"))
+
+# 6. Graficar resultados
+ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y = total_homicidios, fill = DEPARTAMENTO)) +
+  geom_bar(stat = "identity") +
+  labs(
+    title = "Top 5 municipios con más secuestros (1985–2018)",
+    x = "Municipio",
+    y = "Cantidad de homicidios"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+################################# ANALISIS 5 ######################################
+
