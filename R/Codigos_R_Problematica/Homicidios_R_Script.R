@@ -2,6 +2,7 @@
 library(arrow)
 library(dplyr) #Util para eliminar columnas
 library(ggplot2) # para graficar
+library(readr)
 
 #Análisis del número de afectados entre los años 1985 a 2018 (homicidios)
 #Gráfica : Histograma.
@@ -53,6 +54,48 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
     panel.grid.minor = element_blank()
   )
+
+
+
+
+##################################Pregunta 4#########################################################
+#¿Qué registros de municipios (en Colombia ) principalmente están afectados  (mínimo 5)?
+
+# 1. Asegurar tipo numérico
+df_hom <- df_hom %>%
+  mutate(muni_code_hecho = as.numeric(muni_code_hecho))
+
+# 2. Top 5 municipios con más homicidios
+top_municipios <- df_hom %>%
+  group_by(muni_code_hecho) %>%
+  summarise(total_homicidios = n()) %>%
+  arrange(desc(total_homicidios)) %>%
+  slice_head(n = 5)
+
+# 3. Leer archivo CSV de municipios
+municipios_dane <- read_delim("C:/Datos_limpios/CodigosDaneDepartamentoMunicipio/Departamentos_Municipios.csv",
+                              delim = ";", show_col_types = FALSE)
+
+# 4. Limpiar código DANE del municipio
+municipios_dane <- municipios_dane %>%
+  mutate(`CÓDIGO DANE DEL MUNICIPIO` = gsub("\\.", "", `CÓDIGO DANE DEL MUNICIPIO`),
+         `CÓDIGO DANE DEL MUNICIPIO` = trimws(`CÓDIGO DANE DEL MUNICIPIO`),
+         `CÓDIGO DANE DEL MUNICIPIO` = as.numeric(`CÓDIGO DANE DEL MUNICIPIO`))
+
+# 5. Join para obtener nombres de municipios
+top_municipios_nombres <- top_municipios %>%
+  left_join(municipios_dane, by = c("muni_code_hecho" = "CÓDIGO DANE DEL MUNICIPIO"))
+
+# 6. Graficar resultados
+ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y = total_homicidios, fill = DEPARTAMENTO)) +
+  geom_bar(stat = "identity") +
+  labs(
+    title = "Top 5 municipios con más homicidios (1985–2018)",
+    x = "Municipio",
+    y = "Cantidad de homicidios"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 
 
