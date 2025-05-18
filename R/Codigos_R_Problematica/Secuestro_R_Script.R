@@ -59,6 +59,21 @@ ggplot(sc_por_ano, aes(x = yy_hecho, y = n_victimas)) +
 ################################# ANALISIS 2 ################################
 # MAPA DE CALOR SECUESTROS 
 
+
+
+
+
+
+
+
+
+
+
+
+
+################################# ANALISIS 3 ################################
+
+
 # Instalar librerías si hace falta
 install.packages(c("sf", "tidyr", "RColorBrewer"))  # si no se tienen
 
@@ -203,4 +218,3 @@ ggplot(map_data) +
     legend.position = "right"
   )
 
-################################# ANALISIS 3 ################################
