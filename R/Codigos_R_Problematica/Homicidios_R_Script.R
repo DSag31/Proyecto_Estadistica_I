@@ -1,6 +1,6 @@
 #install.packages(c("arrow", "dplyr", "ggplot2"))
 # Instalar librerías si hace falta
-install.packages(c("arrow","dplyr","ggplot2","readr","sf", "tidyr", "RColorBrewer","kableExtra","scales","knitr","lubridate","viridis"))  # si no se tienen
+install.packages(c("arrow","dplyr","ggplot2","readr","sf", "tidyr", "RColorBrewer","kableExtra","scales","knitr","lubridate","viridis","stringr"))  # si no se tienen
 # Cargar librerías importantes
 library(arrow)
 library(dplyr) #Util para eliminar columnas
@@ -14,7 +14,7 @@ library(scales)
 library(viridis)
 library(knitr)
 library(lubridate)
-
+library(stringr)
 ##################################Carga de Datos#########################################################
 
 datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet") 
