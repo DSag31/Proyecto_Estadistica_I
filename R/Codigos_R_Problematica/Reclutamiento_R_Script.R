@@ -21,7 +21,7 @@ datos <- read_parquet("C:/Datos_limpios/datos_filtrados_reclutamiento.parquet")
 
 
 ##################################Pregunta 1#########################################################
-#Análisis del número de afectados entre los años 1985 a 2018 (homicidios)
+#Análisis del número de afectados entre los años 1985 a 2018 (reclutamientos)
 #Gráfica : Histograma.
 
 
@@ -60,7 +60,7 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
   geom_col(width = 0.8) +
   scale_x_continuous(breaks = seq(1985, 2018, by = 1)) +
   labs(
-    title    = "Número de víctimas de homicidio por año (1985–2018)",
+    title    = "Número de víctimas de reclutamiento por año (1985–2018)",
     x        = "Año",
     y        = "Número de víctimas"
   ) +
@@ -144,7 +144,7 @@ ggplot(map_data) +
   ) +
   
   labs(
-    title    = "Mapa de calor victimas de homicidio por departamento (1985–2018)"
+    title    = "Mapa de calor victimas de reclutamiento por departamento (1985–2018)"
   ) +
   theme_void() +
   theme(
@@ -277,7 +277,7 @@ ggplot(map_data) +
     na.value = "white"
   ) +
   labs(
-    title = "Mapa de calor de homicidios en municipios de Santander\n(1985–2018)"
+    title = "Mapa de calor de reclutamientos en municipios de Santander\n(1985–2018)"
   ) +
   theme_void() +
   theme(
@@ -292,11 +292,11 @@ ggplot(map_data) +
 datos <- datos %>%
   mutate(muni_code_hecho = as.numeric(muni_code_hecho))
 
-# 1. Top 5 municipios con más homicidios
+# 1. Top 5 municipios con más reclutamientos
 top_municipios <- datos %>%
   group_by(muni_code_hecho) %>%
-  summarise(total_homicidios = n()) %>%
-  arrange(desc(total_homicidios)) %>%
+  summarise(total_reclutamientos = n()) %>%
+  arrange(desc(total_reclutamientos)) %>%
   slice_head(n = 5)
 
 # 2. Leer archivo CSV de municipios
@@ -314,12 +314,12 @@ top_municipios_nombres <- top_municipios %>%
   left_join(municipios_dane, by = c("muni_code_hecho" = "CÓDIGO DANE DEL MUNICIPIO"))
 
 # 5. Graficar resultados
-ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y = total_homicidios, fill = DEPARTAMENTO)) +
+ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_reclutamientos), y = total_reclutamientos, fill = DEPARTAMENTO)) +
   geom_bar(stat = "identity") +
   labs(
-    title = "Top 5 municipios con más homicidios (1985–2018)",
+    title = "Top 5 municipios con más reclutamientos (1985–2018)",
     x = "Municipio",
-    y = "Cantidad de homicidios"
+    y = "Cantidad de reclutamientos"
   ) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
@@ -332,7 +332,7 @@ ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y 
 conteo_edades <- datos %>%
   count(edad_categoria, sort = TRUE)
 
-# Ver las primeras filas para encontrar la categoría con más homicidios
+# Ver las primeras filas para encontrar la categoría con más reclutamientos
 print(conteo_edades)
 
 # Si deseas mostrar solo la categoría más frecuente (el modo)
@@ -343,9 +343,9 @@ print(edad_mas_afectada)
 
 ggplot(conteo_edades, aes(x = reorder(edad_categoria, -n), y = n)) +
   geom_bar(stat = "identity", fill = "steelblue") +
-  labs(title = "Frecuencia de homicidios por categoría de edad",
+  labs(title = "Frecuencia de reclutamientos por categoría de edad",
        x = "Rango de Edad",
-       y = "Cantidad de Homicidios") +
+       y = "Cantidad dereclutamientos") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
@@ -366,7 +366,7 @@ tabla_etnias <- conteo_etnias %>%
   mutate(porcentaje = round(porcentaje * 100, 3)) %>%
   rename(
     "Grupo Étnico" = etnia,
-    "Número de Homicidios" = n,
+    "Número de reclutamientos" = n,
     "Porcentaje (%)" = porcentaje
   )
 
@@ -379,7 +379,7 @@ ggplot(conteo_etnias, aes(x = "", y = n, fill = etnia)) +
   coord_polar(theta = "y") +
   geom_text(aes(label = etiqueta), position = position_stack(vjust = 0.5), size = 3) +
   labs(
-    title = "Distribución de homicidios por grupo étnico (Pastel)",
+    title = "Distribución de reclutamientos por grupo étnico (Pastel)",
     fill = "Etnia"
   ) +
   theme_void() +
@@ -390,9 +390,9 @@ ggplot(conteo_etnias, aes(x = reorder(etnia, -n), y = n, fill = etnia)) +
   geom_col() +
   geom_text(aes(label = percent(porcentaje, accuracy = 0.001)), vjust = -0.5) +
   labs(
-    title = "Número de homicidios por grupo étnico (Barras)",
+    title = "Número de reclutamientos por grupo étnico (Barras)",
     x = "Grupo Étnico",
-    y = "Número de Homicidios"
+    y = "Número de reclutamientos"
   ) +
   theme_minimal() +
   theme(legend.position = "none") +
@@ -424,7 +424,7 @@ ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
 ##################################Pregunta 8#########################################################
 #En un promedio general, que se ven mas afectados, los hombres o las mujeres?
 
-#Contar homicidios por sexo
+#Contar reclutamientos por sexo
 conteo_sexo <- datos %>%
   count(sexo)
 
@@ -437,7 +437,7 @@ conteo_sexo <- conteo_sexo %>%
 ggplot(conteo_sexo, aes(x = "", y = n, fill = sexo)) +
   geom_bar(stat = "identity", width = 1) +
   coord_polar("y") +
-  labs(title = "Proporción de homicidios por sexo") +
+  labs(title = "Proporción de reclutamientos por sexo") +
   theme_void() +  # Elimina ejes y fondo
   geom_text(aes(label = etiqueta), position = position_stack(vjust = 0.5)) +
   scale_fill_manual(values = c("HOMBRE" = "steelblue", "MUJER" = "salmon"))
@@ -601,7 +601,7 @@ datos <- datos %>%
 ggplot(datos, aes(x = edad_media)) +
   geom_histogram(aes(y = ..density..), bins = 20, fill = "steelblue", alpha = 0.6) +
   geom_density(color = "red", size = 1.2, adjust = 4) +  # ¡Más suave todavía!
-  labs(title = "Distribución de edades de víctimas de homicidio",
+  labs(title = "Distribución de edades de víctimas de reclutamiento",
        x = "Edad (estimada)",
        y = "Densidad") +
   theme_minimal()
@@ -700,7 +700,7 @@ cat("Curtosis:", round(curtosis, 4), "\n")
 ggplot(tabla, aes(x = factor(edad_categoria, levels = tabla$edad_categoria), y = Frecuencia)) +
   geom_bar(stat = "identity", fill = "skyblue", color = "black") +
   labs(
-    title = "Histograma de homicidios por categoría de edad",
+    title = "Histograma de reclutamientos por categoría de edad",
     x = "Categoría de edad",
     y = "Frecuencia"
   ) +
