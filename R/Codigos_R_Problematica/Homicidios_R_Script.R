@@ -14,14 +14,18 @@ library(scales)
 library(viridis)
 library(knitr)
 library(lubridate)
+
+##################################Carga de Datos#########################################################
+
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet") 
+
+
 ##################################Pregunta 1#########################################################
 #Análisis del número de afectados entre los años 1985 a 2018 (homicidios)
 #Gráfica : Histograma.
 
-# 1. Leer el archivo Parquet de homicidios
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet") 
 
-# 2. Filtrar el rango de años de interés y contar víctimas por año
+# 1. Filtrar el rango de años de interés y contar víctimas por año
 df_por_ano <- datos %>%
   filter(yy_hecho >= 1985, yy_hecho <= 2018) %>%
   group_by(yy_hecho) %>%
@@ -51,7 +55,7 @@ df_por_ano <- datos %>%
 # - .groups = "drop" evita que el resultado sea un objeto agrupado 
 
 
-# 3. Crear el histograma (barras por año)
+# 2. Crear el histograma (barras por año)
 ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
   geom_col(width = 0.8) +
   scale_x_continuous(breaks = seq(1985, 2018, by = 1)) +
@@ -67,19 +71,17 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
   )
 ##################################Pregunta 2#########################################################
 #Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos
-# 1. Lee los datos de homicidios y cuenta por departamento
-ddatos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
 casos_dept <- datos %>%
   mutate(dept_code_hecho = sprintf("%02d", as.integer(dept_code_hecho))) %>%
   group_by(dept_code_hecho) %>%
   summarise(n_victimas = n(), .groups = "drop")
 
-# 2. Lee el GeoPackage de departamentos de Colombia
+# 1. Lee el GeoPackage de departamentos de Colombia
 gdf_dept <- st_read("C:/Datos_limpios/gadm41_COL.gpkg", layer = "ADM_ADM_1") %>%
   st_transform(4326)
 
-# 3. Diccionario nombre → código DANE
+# 2. Diccionario nombre → código DANE
 nombre_codigos <- c(
   "Amazonas"                     = "91",
   "Antioquia"                    = "05",
@@ -116,17 +118,17 @@ nombre_codigos <- c(
   "Vichada"                      = "99"
 )
 
-# 4. Asigna el código a cada polígono
+# 3. Asigna el código a cada polígono
 #    Sustituye NAME_1 por el nombre correcto de la columna de tu GPKG
 gdf_dept <- gdf_dept %>%
   mutate(dept_code_hecho = nombre_codigos[as.character(NAME_1)])
 
-# 5. Une y completa NA con cero
+# 4. Une y completa NA con cero
 map_data <- gdf_dept %>%
   left_join(casos_dept, by = "dept_code_hecho") %>%
   replace_na(list(n_victimas = 0))
 
-# 6. Dibuja el mapa
+# 5. Dibuja el mapa
 
 ggplot(map_data) +
   geom_sf(aes(fill = n_victimas), color = "gray80", size = 0.2) +
@@ -152,15 +154,13 @@ ggplot(map_data) +
   )
 ##################################Pregunta 3#########################################################
 #¿Qué tal está la situación de Bucaramanga? (mapa de calor de los municipios de santander, enfocándonos en la región de santander)
-# 1. Lee los datos de homicidios y cuenta por municipio
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
 casos_mun <- datos %>%
   mutate(muni_code_hecho = sprintf("%05d", as.integer(muni_code_hecho))) %>%
   group_by(muni_code_hecho) %>%
   summarise(n_victimas = n(), .groups = "drop")
 
-# 2. Lee la capa de municipios de Colombia y filtra solo Santander
+# 1. Lee la capa de municipios de Colombia y filtra solo Santander
 gdf_mun <- st_read("C:/Datos_limpios/gadm41_COL.gpkg", layer = "ADM_ADM_2") %>%
   st_transform(4326)
 
@@ -168,7 +168,7 @@ gdf_mun <- st_read("C:/Datos_limpios/gadm41_COL.gpkg", layer = "ADM_ADM_2") %>%
 gdf_santander <- gdf_mun %>%
   filter(NAME_1 == "Santander")
 
-# 3. Diccionario nombre de municipio → código DANE de 5 dígitos
+# 2. Diccionario nombre de municipio → código DANE de 5 dígitos
 nombre_codigos <- c(
   "Bucaramanga"               = "68001",
   "Aguada"                    = "68013",
@@ -259,16 +259,16 @@ nombre_codigos <- c(
   "Zapatoca"                  = "68895"
 )
 
-# 4. Asigna el código DANE a cada municipio (columna NAME_2 en tu GPKG)
+# 3. Asigna el código DANE a cada municipio (columna NAME_2 en tu GPKG)
 gdf_santander <- gdf_santander %>%
   mutate(muni_code_hecho = nombre_codigos[as.character(NAME_2)])
 
-# 5. Une los conteos y rellena con cero donde falte
+# 4. Une los conteos y rellena con cero donde falte
 map_data <- gdf_santander %>%
   left_join(casos_mun, by = "muni_code_hecho") %>%
   replace_na(list(n_victimas = 0))
 
-# 6. Dibuja el mapa sólo de Santander, con escala invertida (rojo = más víctimas)
+# 5. Dibuja el mapa sólo de Santander, con escala invertida (rojo = más víctimas)
 ggplot(map_data) +
   geom_sf(aes(fill = n_victimas), color = "gray80", size = 0.2) +
   scale_fill_gradientn(
@@ -288,33 +288,32 @@ ggplot(map_data) +
 
 ##################################Pregunta 4#########################################################
 #¿Qué registros de municipios (en Colombia ) principalmente están afectados  (mínimo 5)?
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
-# 1. Asegurar tipo numérico
+
 datos <- datos %>%
   mutate(muni_code_hecho = as.numeric(muni_code_hecho))
 
-# 2. Top 5 municipios con más homicidios
+# 1. Top 5 municipios con más homicidios
 top_municipios <- datos %>%
   group_by(muni_code_hecho) %>%
   summarise(total_homicidios = n()) %>%
   arrange(desc(total_homicidios)) %>%
   slice_head(n = 5)
 
-# 3. Leer archivo CSV de municipios
+# 2. Leer archivo CSV de municipios
 municipios_dane <- read_delim("C:/Datos_limpios/CodigosDaneDepartamentoMunicipio/Departamentos_Municipios.csv",
                               delim = ";", show_col_types = FALSE)
 
-# 4. Limpiar código DANE del municipio
+# 3. Limpiar código DANE del municipio
 municipios_dane <- municipios_dane %>%
   mutate(`CÓDIGO DANE DEL MUNICIPIO` = gsub("\\.", "", `CÓDIGO DANE DEL MUNICIPIO`),
          `CÓDIGO DANE DEL MUNICIPIO` = trimws(`CÓDIGO DANE DEL MUNICIPIO`),
          `CÓDIGO DANE DEL MUNICIPIO` = as.numeric(`CÓDIGO DANE DEL MUNICIPIO`))
 
-# 5. Join para obtener nombres de municipios
+# 4. Join para obtener nombres de municipios
 top_municipios_nombres <- top_municipios %>%
   left_join(municipios_dane, by = c("muni_code_hecho" = "CÓDIGO DANE DEL MUNICIPIO"))
 
-# 6. Graficar resultados
+# 5. Graficar resultados
 ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y = total_homicidios, fill = DEPARTAMENTO)) +
   geom_bar(stat = "identity") +
   labs(
@@ -328,7 +327,7 @@ ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y 
 #De que edad a que edad han estado las personas mas afectadas (mayor frecuencia absoluta del intervalo)
   #a. la infancia van de 0 a 14, los adolescentes de 15 a 19,  adultez desde los 20 en adelante
 
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
+
 # Contar la frecuencia absoluta de cada categoría de edad
 conteo_edades <- datos %>%
   count(edad_categoria, sort = TRUE)
@@ -352,10 +351,8 @@ ggplot(conteo_edades, aes(x = reorder(edad_categoria, -n), y = n)) +
 
 ##################################Pregunta 6#########################################################
 #Que tipo de etnias existen y cuales han sido las más afectadas
-# 1. Leer los datos
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
-# 2. Agrupar por etnia y calcular porcentaje preciso
+# 1. Agrupar por etnia y calcular porcentaje preciso
 conteo_etnias <- datos %>%
   filter(!is.na(etnia) & etnia != "") %>%
   count(etnia, sort = TRUE) %>%
@@ -364,7 +361,7 @@ conteo_etnias <- datos %>%
     etiqueta = paste0(etnia, " (", percent(porcentaje, accuracy = 0.001), ")")  # Precisión de 0.001%
   )
 
-# 3. Tabla de resumen con porcentaje con 3 decimales
+# 2. Tabla de resumen con porcentaje con 3 decimales
 tabla_etnias <- conteo_etnias %>%
   mutate(porcentaje = round(porcentaje * 100, 3)) %>%
   rename(
@@ -376,7 +373,7 @@ tabla_etnias <- conteo_etnias %>%
 # Mostrar tabla en consola
 kable(tabla_etnias, format = "markdown", align = "c")
 
-# 4. Diagrama de pastel con etiquetas precisas
+# 3. Diagrama de pastel con etiquetas precisas
 ggplot(conteo_etnias, aes(x = "", y = n, fill = etnia)) +
   geom_col(width = 1, color = "white") +
   coord_polar(theta = "y") +
@@ -388,7 +385,7 @@ ggplot(conteo_etnias, aes(x = "", y = n, fill = etnia)) +
   theme_void() +
   theme(legend.position = "none")
 
-# 5. Diagrama de barras con porcentaje más exacto
+# 4. Diagrama de barras con porcentaje más exacto
 ggplot(conteo_etnias, aes(x = reorder(etnia, -n), y = n, fill = etnia)) +
   geom_col() +
   geom_text(aes(label = percent(porcentaje, accuracy = 0.001)), vjust = -0.5) +
@@ -403,18 +400,16 @@ ggplot(conteo_etnias, aes(x = reorder(etnia, -n), y = n, fill = etnia)) +
   #a. Cuantos casos estan asociados con desplazamiento forzado (relacion de la columna is_forced_dis)
 ##################################Pregunta 7#########################################################
 #¿Qué guerrilla es la que está afectando más a estos ciudadanos?
-# 1. Leer datos
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
-# 2. Contar casos por guerrilla (columna p_str)
+# 1. Contar casos por guerrilla (columna p_str)
 conteo_guerrilla <- datos %>%
   filter(!is.na(p_str) & p_str != "") %>%
   count(p_str, sort = TRUE)
 
-# 3. Mostrar tabla con conteo total por guerrilla
+# 2. Mostrar tabla con conteo total por guerrilla
 print(conteo_guerrilla)
 
-# 4. Graficar top 10 guerrillas que más afectan (por número de casos)
+# 3. Graficar top 10 guerrillas que más afectan (por número de casos)
 top10_guerrilla <- head(conteo_guerrilla, 10)
 
 ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
@@ -428,7 +423,6 @@ ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
   theme_minimal()
 ##################################Pregunta 8#########################################################
 #En un promedio general, que se ven mas afectados, los hombres o las mujeres?
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
 #Contar homicidios por sexo
 conteo_sexo <- datos %>%
@@ -451,10 +445,8 @@ ggplot(conteo_sexo, aes(x = "", y = n, fill = sexo)) +
 
 ##################################Pregunta 9#########################################################
 #¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos )
-# 1. Leer datos parquet
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
-# 2. Extraer año y mes desde la variable yymm_hecho
+# 1. Extraer año y mes desde la variable yymm_hecho
 datos <- datos %>%
   mutate(
     anio = as.integer(substr(yymm_hecho, 1, 4)),
@@ -462,16 +454,16 @@ datos <- datos %>%
   ) %>%
   filter(anio >= 1985, anio <= 2018, mes >= 1, mes <= 12)
 
-# 3. Contar víctimas por año y mes
+# 2. Contar víctimas por año y mes
 conteo_mes_anio <- datos %>%
   group_by(anio, mes) %>%
   summarise(casos = n(), .groups = "drop")
 
-# 4. Convertir número de mes a nombre del mes
+# 3. Convertir número de mes a nombre del mes
 conteo_mes_anio <- conteo_mes_anio %>%
   mutate(mes_nombre = factor(month.abb[mes], levels = rev(month.abb)))
 
-# 5. Crear heatmap
+# 4. Crear heatmap
 ggplot(conteo_mes_anio, aes(x = anio, y = mes_nombre, fill = casos)) +
   geom_tile(color = "white") +
   scale_fill_viridis_c(option = "inferno") +
@@ -485,8 +477,7 @@ ggplot(conteo_mes_anio, aes(x = anio, y = mes_nombre, fill = casos)) +
 ##################################Pregunta 10#########################################################
  #¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
 
-# LECTURA DEL PARQUET
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
+
 
 # FILTROS Y ORGANIZACION
 df_infancia <- datos %>%
@@ -507,7 +498,7 @@ df_adultez <- datos %>%
     dept_code_hecho = sprintf("%02d", as.integer(dept_code_hecho))
   )
 
-# 3. Mapa código → nombre de departamento
+# Mapa código → nombre de departamento
 dept_lookup <- c(
   "91" = "Amazonas",       "05" = "Antioquia",    "81" = "Arauca",
   "08" = "Atlántico",      "11" = "Bogotá D.C.",   "13" = "Bolívar",
@@ -592,7 +583,6 @@ ggplot(resumen_adultez, aes(x = dept_nombre, y = n_victimas)) +
 
 ##################################Pregunta 11#########################################################
 #¿La distribución de las edades esta sesgada mas a la parte de Infacncia o adultos?
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
 datos <- datos %>%
   filter(!is.na(edad_categoria)) %>%
