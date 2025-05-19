@@ -1,6 +1,6 @@
 #install.packages(c("arrow", "dplyr", "ggplot2"))
 # Instalar librerías si hace falta
-install.packages(c("arrow","dplyr","ggplot2","readr","sf", "tidyr", "RColorBrewer","kableExtra","scales","knitr"))  # si no se tienen
+install.packages(c("arrow","dplyr","ggplot2","readr","sf", "tidyr", "RColorBrewer","kableExtra","scales","knitr","lubridate","viridis"))  # si no se tienen
 # Cargar librerías importantes
 library(arrow)
 library(dplyr) #Util para eliminar columnas
@@ -11,7 +11,9 @@ library(tidyr)
 library(RColorBrewer)  # para paletas extra
 library(kableExtra)
 library(scales)
+library(viridis)
 library(knitr)
+library(lubridate)
 ##################################Pregunta 1#########################################################
 #Análisis del número de afectados entre los años 1985 a 2018 (homicidios)
 #Gráfica : Histograma.
@@ -425,7 +427,7 @@ ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
   theme_minimal()
 ##################################Pregunta 8#########################################################
 #En un promedio general, que se ven mas afectados, los hombres o las mujeres?
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet"
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
 #Contar homicidios por sexo
 conteo_sexo <- datos %>%
@@ -448,7 +450,37 @@ ggplot(conteo_sexo, aes(x = "", y = n, fill = sexo)) +
 
 ##################################Pregunta 9#########################################################
 #¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos )
+# 1. Leer datos parquet
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 
+# 2. Extraer año y mes desde la variable yymm_hecho
+datos <- datos %>%
+  mutate(
+    anio = as.integer(substr(yymm_hecho, 1, 4)),
+    mes = as.integer(substr(yymm_hecho, 5, 6))
+  ) %>%
+  filter(anio >= 1985, anio <= 2018, mes >= 1, mes <= 12)
+
+# 3. Contar víctimas por año y mes
+conteo_mes_anio <- datos %>%
+  group_by(anio, mes) %>%
+  summarise(casos = n(), .groups = "drop")
+
+# 4. Convertir número de mes a nombre del mes
+conteo_mes_anio <- conteo_mes_anio %>%
+  mutate(mes_nombre = factor(month.abb[mes], levels = rev(month.abb)))
+
+# 5. Crear heatmap
+ggplot(conteo_mes_anio, aes(x = anio, y = mes_nombre, fill = casos)) +
+  geom_tile(color = "white") +
+  scale_fill_viridis_c(option = "inferno") +
+  labs(
+    title = "Mapa de calor de víctimas por mes y año (1985–2018)",
+    x = "Año",
+    y = "Mes",
+    fill = "Número de víctimas"
+  ) +
+  theme_minimal()
 ##################################Pregunta 10#########################################################
  #¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
 
