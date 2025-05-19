@@ -328,6 +328,7 @@ ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_homicidios), y 
 #De que edad a que edad han estado las personas mas afectadas (mayor frecuencia absoluta del intervalo)
   #a. la infancia van de 0 a 14, los adolescentes de 15 a 19,  adultez desde los 20 en adelante
 
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
 # Contar la frecuencia absoluta de cada categoría de edad
 conteo_edades <- datos %>%
   count(edad_categoria, sort = TRUE)
@@ -485,7 +486,30 @@ ggplot(conteo_mes_anio, aes(x = anio, y = mes_nombre, fill = casos)) +
  #¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
 
 ##################################Pregunta 11#########################################################
-#¿La distribución de las edades esta sesgada mas a la parte de jóvenes o adultos?
+#¿La distribución de las edades esta sesgada mas a la parte de Infacncia o adultos?
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
+
+datos <- datos %>%
+  filter(!is.na(edad_categoria)) %>%
+  mutate(edad_media = case_when(
+    str_detect(edad_categoria, "\\d+-\\d+") ~ {
+      as.numeric(str_extract(edad_categoria, "^\\d+")) +
+        (as.numeric(str_extract(edad_categoria, "\\d+$")) -
+           as.numeric(str_extract(edad_categoria, "^\\d+"))) / 2
+    },
+    edad_categoria == "5-sep" ~ 7,       # Aprox 5-9 años
+    edad_categoria == "oct-14" ~ 11,     # Aprox 8-14 años
+    edad_categoria == "95\\+" ~ 97.5,    # Valor estimado para 95+
+    TRUE ~ NA_real_
+  ))
+
+ggplot(datos, aes(x = edad_media)) +
+  geom_histogram(aes(y = ..density..), bins = 20, fill = "steelblue", alpha = 0.6) +
+  geom_density(color = "red", size = 1.2, adjust = 4) +  # ¡Más suave todavía!
+  labs(title = "Distribución de edades de víctimas de homicidio",
+       x = "Edad (estimada)",
+       y = "Densidad") +
+  theme_minimal()
 
 ##################################Pregunta 12#########################################################
 #Si conviertes edad categoría a numérica, ¿cuál es la edad promedio de las víctimas?
