@@ -614,9 +614,6 @@ ggplot(datos, aes(x = edad_media)) +
   #e. y su sesgo?
   #f. que hay de su kurtosis?
 
-#  Leer datos parquet
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
-
 # Tabla de frecuencias a partir de 'edad_categoria'
 # Corregir la categoría "95+" para que sea tratada como "95-100"
 datos <- datos %>%
@@ -710,3 +707,21 @@ ggplot(tabla, aes(x = factor(edad_categoria, levels = tabla$edad_categoria), y =
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
+
+
+# Boxplot de bigotes
+vector_edades <- rep(tabla$Marca_clase, times = tabla$Frecuencia)
+df_box <- data.frame(age = vector_edades)
+ggplot(df_box, aes(x = factor(1), y = age)) +
+  geom_boxplot(fill = "#69b3a2", color = "black", outlier.colour = "red") +
+  labs(
+    title = "Boxplot de edades (punto medio de intervalos)",
+    y     = "Edad aproximada",
+    x     = NULL
+  ) +
+  scale_x_discrete(name = NULL) +      # fuerza un eje discreto con un solo nivel
+  theme_minimal() +
+  theme(
+    axis.text.x  = element_blank(),    # quita las etiquetas del eje X
+    axis.ticks.x = element_blank()     # quita los ticks del eje X
+  )
