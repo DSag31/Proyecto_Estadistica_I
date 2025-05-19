@@ -613,3 +613,88 @@ ggplot(datos, aes(x = edad_media)) +
   #d. Aplicando los cuartiles, ¿que podemos deducir?
   #e. y su sesgo?
   #f. que hay de su kurtosis?
+
+#  Leer datos parquet
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
+
+# Tabla de frecuencias a partir de 'edad_categoria'
+# Corregir la categoría "95+" para que sea tratada como "95-100"
+datos <- datos %>%
+  mutate(edad_categoria = ifelse(edad_categoria == "95+", "95-100", edad_categoria))
+
+# Tabla de frecuencias
+tabla <- datos %>%
+  count(edad_categoria) %>%
+  rename(Frecuencia = n) %>%
+  mutate(
+    Limites = strsplit(as.character(edad_categoria), "-"),
+    Lim_inf = as.numeric(sapply(Limites, `[`, 1)),
+    Lim_sup = as.numeric(sapply(Limites, `[`, 2)),
+    Marca_clase = (Lim_inf + Lim_sup) / 2
+  ) %>%
+  arrange(Lim_inf) %>%
+  mutate(
+    Frec_acum = cumsum(Frecuencia),
+    Frec_rel = Frecuencia / sum(Frecuencia),
+    Frec_rel_acum = cumsum(Frec_rel)
+  )
+
+# Mostrar tabla resultante
+print(tabla)
+
+# Media
+media <- sum(tabla$Marca_clase * tabla$Frecuencia) / sum(tabla$Frecuencia)
+cat("Media:", round(media, 2), "\n")
+
+# Moda
+moda <- tabla$Marca_clase[which.max(tabla$Frecuencia)]
+cat("Moda:", moda, "\n")
+
+# Mediana
+N <- sum(tabla$Frecuencia)
+N_mitad <- N / 2
+fila_mediana <- which(tabla$Frec_acum >= N_mitad)[1]
+L_i <- tabla$Lim_inf[fila_mediana]
+F_a <- ifelse(fila_mediana == 1, 0, tabla$Frec_acum[fila_mediana - 1])
+f_i <- tabla$Frecuencia[fila_mediana]
+h <- tabla$Lim_sup[fila_mediana] - tabla$Lim_inf[fila_mediana]
+mediana <- L_i + ((N_mitad - F_a) / f_i) * h
+cat("Mediana:", round(mediana, 2), "\n")
+
+# Varianza y desviación estándar
+varianza <- sum(tabla$Frecuencia * (tabla$Marca_clase - media)^2) / (N - 1)
+desviacion <- sqrt(varianza)
+cat("Varianza:", round(varianza, 2), "\n")
+cat("Desviación estándar:", round(desviacion, 2), "\n")
+
+# Cuartiles
+# Q1
+pos_Q1 <- N / 4
+fila_Q1 <- which(tabla$Frec_acum >= pos_Q1)[1]
+L_Q1 <- tabla$Lim_inf[fila_Q1]
+F_Q1 <- ifelse(fila_Q1 == 1, 0, tabla$Frec_acum[fila_Q1 - 1])
+f_Q1 <- tabla$Frecuencia[fila_Q1]
+h_Q1 <- tabla$Lim_sup[fila_Q1] - tabla$Lim_inf[fila_Q1]
+Q1 <- L_Q1 + ((pos_Q1 - F_Q1) / f_Q1) * h_Q1
+
+# Q3
+pos_Q3 <- 3 * N / 4
+fila_Q3 <- which(tabla$Frec_acum >= pos_Q3)[1]
+L_Q3 <- tabla$Lim_inf[fila_Q3]
+F_Q3 <- ifelse(fila_Q3 == 1, 0, tabla$Frec_acum[fila_Q3 - 1])
+f_Q3 <- tabla$Frecuencia[fila_Q3]
+h_Q3 <- tabla$Lim_sup[fila_Q3] - tabla$Lim_inf[fila_Q3]
+Q3 <- L_Q3 + ((pos_Q3 - F_Q3) / f_Q3) * h_Q3
+
+IQR <- Q3 - Q1
+cat("Q1:", round(Q1, 2), "\n")
+cat("Q3:", round(Q3, 2), "\n")
+cat("IQR:", round(IQR, 2), "\n")
+
+# Asimetría
+asimetria <- sum(tabla$Frecuencia * (tabla$Marca_clase - media)^3) / (N * desviacion^3)
+cat("Asimetría:", round(asimetria, 4), "\n")
+
+# Curtosis
+curtosis <- (sum(tabla$Frecuencia * (tabla$Marca_clase - media)^4) / (N * desviacion^4)) - 3
+cat("Curtosis:", round(curtosis, 4), "\n")
