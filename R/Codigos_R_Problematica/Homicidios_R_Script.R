@@ -485,6 +485,111 @@ ggplot(conteo_mes_anio, aes(x = anio, y = mes_nombre, fill = casos)) +
 ##################################Pregunta 10#########################################################
  #¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
 
+# LECTURA DEL PARQUET
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
+
+# FILTROS Y ORGANIZACION
+df_infancia <- datos %>%
+  filter(edad_jep == "INFANCIA") %>%
+  mutate(
+    dept_code_hecho = sprintf("%02d", as.integer(dept_code_hecho))
+  )
+
+df_adolecencia <- datos %>%
+  filter(edad_jep == "ADOLESCENCIA") %>%
+  mutate(
+    dept_code_hecho = sprintf("%02d", as.integer(dept_code_hecho))
+  )
+
+df_adultez <- datos %>%
+  filter(edad_jep == "ADULTEZ") %>%
+  mutate(
+    dept_code_hecho = sprintf("%02d", as.integer(dept_code_hecho))
+  )
+
+# 3. Mapa código → nombre de departamento
+dept_lookup <- c(
+  "91" = "Amazonas",       "05" = "Antioquia",    "81" = "Arauca",
+  "08" = "Atlántico",      "11" = "Bogotá D.C.",   "13" = "Bolívar",
+  "15" = "Boyacá",         "17" = "Caldas",        "18" = "Caquetá",
+  "85" = "Casanare",       "19" = "Cauca",         "20" = "Cesar",
+  "27" = "Chocó",          "23" = "Córdoba",       "25" = "Cundinamarca",
+  "94" = "Guainía",        "95" = "Guaviare",      "41" = "Huila",
+  "44" = "La Guajira",     "47" = "Magdalena",     "50" = "Meta",
+  "52" = "Nariño",         "54" = "Norte de Santander",
+  "86" = "Putumayo",       "63" = "Quindío",       "66" = "Risaralda",
+  "88" = "San Andrés y Providencia",
+  "68" = "Santander",      "70" = "Sucre",         "73" = "Tolima",
+  "76" = "Valle del Cauca","97" = "Vaupés",        "99" = "Vichada"
+)
+
+
+df_infancia <- df_infancia %>%
+  mutate(dept_nombre = dept_lookup[dept_code_hecho])
+
+
+resumen_infancia <- df_infancia %>%
+  group_by(dept_nombre) %>%
+  summarise(n_victimas = n(), .groups = "drop")
+
+ggplot(resumen_infancia, aes(x = dept_nombre, y = n_victimas)) +
+  geom_col(fill = "#D53E4F") +
+  labs(
+    title = "Victimas en la categoria de INFANCIA por departamento",
+    x     = "Departamento",
+    y     = "Número de víctimas (INFANCIA)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  )
+
+
+df_adolecencia <- df_adolecencia %>%
+  mutate(dept_nombre = dept_lookup[dept_code_hecho])
+
+
+resumen_adolecencia <- df_adolecencia %>%
+  group_by(dept_nombre) %>%
+  summarise(n_victimas = n(), .groups = "drop")
+
+ggplot(resumen_adolecencia, aes(x = dept_nombre, y = n_victimas)) +
+  geom_col(fill = "#D53E4F") +
+  labs(
+    title = "Victimas en la categoria de ADOLECENCIA por departamento",
+    x     = "Departamento",
+    y     = "Número de víctimas (ADOLECENCIA)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  )
+
+
+df_adultez <- df_adultez %>%
+  mutate(dept_nombre = dept_lookup[dept_code_hecho])
+
+
+resumen_adultez <- df_adultez %>%
+  group_by(dept_nombre) %>%
+  summarise(n_victimas = n(), .groups = "drop")
+
+ggplot(resumen_adultez, aes(x = dept_nombre, y = n_victimas)) +
+  geom_col(fill = "#D53E4F") +
+  labs(
+    title = "Victimas en la categoria de ADULTEZ por departamento",
+    x     = "Departamento",
+    y     = "Número de víctimas (Adultez)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  )
+
+
+
+
+
 ##################################Pregunta 11#########################################################
 #¿La distribución de las edades esta sesgada mas a la parte de Infacncia o adultos?
 datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
