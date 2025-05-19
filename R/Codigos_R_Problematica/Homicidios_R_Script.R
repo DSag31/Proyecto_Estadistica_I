@@ -514,7 +514,6 @@ ggplot(datos, aes(x = edad_media)) +
 ##################################Pregunta 12#########################################################
 #Si conviertes edad categoría a numérica, ¿cuál es la edad promedio de las víctimas?
   #a. en promedio, que edades han sido afectadas
-  #b. cual es la edad más afectada (moda)
   #c. varianza y desviacion estandar
   #d. Aplicando los cuartiles, ¿que podemos deducir?
   #e. y su sesgo?
