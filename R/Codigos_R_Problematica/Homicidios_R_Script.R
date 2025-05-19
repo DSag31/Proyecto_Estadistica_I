@@ -698,3 +698,15 @@ cat("Asimetría:", round(asimetria, 4), "\n")
 # Curtosis
 curtosis <- (sum(tabla$Frecuencia * (tabla$Marca_clase - media)^4) / (N * desviacion^4)) - 3
 cat("Curtosis:", round(curtosis, 4), "\n")
+
+# Histograma basado en frecuencias por categoría de edad
+ggplot(tabla, aes(x = factor(edad_categoria, levels = tabla$edad_categoria), y = Frecuencia)) +
+  geom_bar(stat = "identity", fill = "skyblue", color = "black") +
+  labs(
+    title = "Histograma de homicidios por categoría de edad",
+    x = "Categoría de edad",
+    y = "Frecuencia"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
