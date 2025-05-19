@@ -317,7 +317,7 @@ top_municipios_nombres <- top_municipios %>%
 ggplot(top_municipios_nombres, aes(x = reorder(MUNICIPIO, -total_reclutamientos), y = total_reclutamientos, fill = DEPARTAMENTO)) +
   geom_bar(stat = "identity") +
   labs(
-    title = "Top 5 municipios con más reclutamientos (1985–2018)",
+    title = "Top 5 municipios con más reclutamientos  (1985–2018)",
     x = "Municipio",
     y = "Cantidad de reclutamientos"
   ) +
@@ -468,7 +468,7 @@ ggplot(conteo_mes_anio, aes(x = anio, y = mes_nombre, fill = casos)) +
   geom_tile(color = "white") +
   scale_fill_viridis_c(option = "inferno") +
   labs(
-    title = "Mapa de calor de víctimas por mes y año (1985–2018)",
+    title = "Mapa de calor de víctimas de reclutamiento por mes y año (1985–2018)",
     x = "Año",
     y = "Mes",
     fill = "Número de víctimas"
@@ -526,7 +526,7 @@ resumen_infancia <- df_infancia %>%
 ggplot(resumen_infancia, aes(x = dept_nombre, y = n_victimas)) +
   geom_col(fill = "#D53E4F") +
   labs(
-    title = "Victimas en la categoria de INFANCIA por departamento",
+    title = "Victimas de reclutamiento en la categoria de INFANCIA por departamento",
     x     = "Departamento",
     y     = "Número de víctimas (INFANCIA)"
   ) +
@@ -547,7 +547,7 @@ resumen_adolecencia <- df_adolecencia %>%
 ggplot(resumen_adolecencia, aes(x = dept_nombre, y = n_victimas)) +
   geom_col(fill = "#D53E4F") +
   labs(
-    title = "Victimas en la categoria de ADOLECENCIA por departamento",
+    title = "Victimas de reclutamiento en la categoria de ADOLECENCIA por departamento",
     x     = "Departamento",
     y     = "Número de víctimas (ADOLECENCIA)"
   ) +
@@ -568,7 +568,7 @@ resumen_adultez <- df_adultez %>%
 ggplot(resumen_adultez, aes(x = dept_nombre, y = n_victimas)) +
   geom_col(fill = "#D53E4F") +
   labs(
-    title = "Victimas en la categoria de ADULTEZ por departamento",
+    title = "Victimas de reclutamiento en la categoria de ADULTEZ por departamento",
     x     = "Departamento",
     y     = "Número de víctimas (Adultez)"
   ) +
@@ -715,7 +715,7 @@ df_box <- data.frame(age = vector_edades)
 ggplot(df_box, aes(x = factor(1), y = age)) +
   geom_boxplot(fill = "#69b3a2", color = "black", outlier.colour = "red") +
   labs(
-    title = "Boxplot de edades (punto medio de intervalos)",
+    title = "Boxplot de edades reclutamiento (punto medio de intervalos)",
     y     = "Edad aproximada",
     x     = NULL
   ) +
