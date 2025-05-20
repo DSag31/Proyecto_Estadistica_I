@@ -133,7 +133,6 @@ map_data <- gdf_dept %>%
 ggplot(map_data) +
   geom_sf(aes(fill = n_victimas), color = "gray80", size = 0.2) +
   
-  # ←   DESCOMENTA UNA DE ESTAS 3 OPCIONES DE ESCALA   ←
 
   #scale_fill_viridis_c(name = "N° víctimas", option = "magma", direction = -1) +
 
