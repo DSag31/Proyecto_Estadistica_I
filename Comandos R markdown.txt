@@ -1,1 +1,2 @@
+ctrl + shift + k ; Ejecuta el código de la celda actual y pasa a la siguiente celda
 ctrl + alt + i ; Genera una sección para escribir usando un lenguaje de programación

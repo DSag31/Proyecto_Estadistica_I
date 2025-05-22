@@ -1,6 +1,9 @@
 ---
-title: "PresentacionDesaparicion"
-author: "Yerson Antolinez"
+title: "Presentación General"
+author: 
+  - "Yerson Guillermo Antolinez Peña"
+  - "David Steven Anaya González"
+  - "Sebastián Laguna Funes"
 date: "2025-05-14"
 output: 
   html_document:
@@ -14,4 +17,44 @@ output:
     df_print: paged
     code_folding: show
 ---
+
+# INTRODUCCION
+# METODOLOGIA
+# RESULTADOS
+# DISCUSIÓN
+# CONCLUSIÓN 
+# REFERENCIAS
+ 
+##### Ejemplos de proyectos similares  
+- https://rpubs.com/KarenR/1071781   
+- https://rpubs.com/angiechen/234334  
+- https://rpubs.com/bradleyboehmke/final_project_example  
+- https://rpubs.com/ishantnayer/234221  
+- https://rpubs.com/hailce17/301571  
+- https://rpubs.com/dyang9411/301598  
+- https://rpubs.com/yash91sharma/dw_project_ys  
+
+
+##### Documentación sobre RMarkdown:
+- https://rstudio-pubs-static.s3.amazonaws.com/535448_04e35a88e9f248229c8d93f084a17991.html  
+- http://enrdados.net/post/informes-html-con-rmarkdown/  
+- https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf  
+
+
+##### Documentación sobre Shiny:
+- https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html  
+- https://luisxsuper.github.io/bibroxd/paquetes-rmarkdown-y-shiny.html
+
+
+##### Documentación sobre gráficas con ggplot2:
+- https://enrdados.netlify.app/post/graficas-con-ggplot/?msclkid=5a737af9c75211ec8faccc9d9853b782  
+- https://enrdados.netlify.app/post/graficas-con-ggplot-ii/?msclkid=6a66b35ad14111ecb326b6a5fcaec999  
+- https://r-graphics.org/  
+- https://clauswilke.com/dataviz/  
+
+
+##### Análisis exploratorio de datos:
+- https://r4ds.hadley.nz/eda  
+
+
 
