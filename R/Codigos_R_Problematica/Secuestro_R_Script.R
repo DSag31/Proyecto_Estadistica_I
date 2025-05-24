@@ -286,7 +286,7 @@ ggplot(map_data) +
     na.value = "white"
   ) +
   labs(
-    title = "Mapa de calor de homicidios en municipios de Santander\n(1985–2018)"
+    title = "Mapa de calor de secuestros en municipios de Santander\n(1985–2018)"
   ) +
   theme_void() +
   theme(

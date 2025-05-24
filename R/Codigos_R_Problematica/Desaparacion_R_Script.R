@@ -380,7 +380,7 @@ ggplot(conteo_etnias, aes(x = "", y = n, fill = etnia)) +
   coord_polar(theta = "y") +
   geom_text(aes(label = etiqueta), position = position_stack(vjust = 0.5), size = 3) +
   labs(
-    title = "Distribución de  por grupo étnico (Pastel)",
+    title = "Distribución de desapariciones por grupo étnico (Pastel)",
     fill = "Etnia"
   ) +
   theme_void() +
@@ -417,7 +417,7 @@ ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
   geom_col(show.legend = FALSE) +
   coord_flip() +
   labs(
-    title = "Guerrillas que más afectan a los ciudadanos",
+    title = "Guerrillas que más afectan a los ciudadanos (Deapariciones)",
     x = "Guerrilla",
     y = "Número de casos"
   ) +
@@ -469,7 +469,7 @@ ggplot(conteo_mes_anio, aes(x = anio, y = mes_nombre, fill = casos)) +
   geom_tile(color = "white") +
   scale_fill_viridis_c(option = "inferno") +
   labs(
-    title = "Mapa de calor de víctimas por mes y año (1985–2018)",
+    title = "Mapa de calor de víctimas de desapariciones por mes y año (1985–2018)",
     x = "Año",
     y = "Mes",
     fill = "Número de víctimas"
@@ -701,7 +701,7 @@ cat("Curtosis:", round(curtosis, 4), "\n")
 ggplot(tabla, aes(x = factor(edad_categoria, levels = tabla$edad_categoria), y = Frecuencia)) +
   geom_bar(stat = "identity", fill = "skyblue", color = "black") +
   labs(
-    title = "Histograma de  por categoría de edad",
+    title = "Histograma de  por categoría de edad (desapariciones)",
     x = "Categoría de edad",
     y = "Frecuencia"
   ) +
