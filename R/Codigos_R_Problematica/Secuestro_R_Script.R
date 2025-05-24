@@ -730,7 +730,7 @@ df_box <- data.frame(age = vector_edades)
 ggplot(df_box, aes(x = factor(1), y = age)) +
   geom_boxplot(fill = "#69b3a2", color = "black", outlier.colour = "red") +
   labs(
-    title = "Boxplot de edades (secuestros )(punto medio de intervalos)",
+    title = "Boxplot de edades secuestros (punto medio de intervalos)",
     y     = "Edad aproximada",
     x     = NULL
   ) +
