@@ -415,7 +415,7 @@ ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
   geom_col(show.legend = FALSE) +
   coord_flip() +
   labs(
-    title = "Guerrillas que más afectan a los ciudadanos",
+    title = "Guerrillas que más afectan a los ciudadanos (homicidios)",
     x = "Guerrilla",
     y = "Número de casos"
   ) +
@@ -467,7 +467,7 @@ ggplot(conteo_mes_anio, aes(x = anio, y = mes_nombre, fill = casos)) +
   geom_tile(color = "white") +
   scale_fill_viridis_c(option = "inferno") +
   labs(
-    title = "Mapa de calor de víctimas por mes y año (1985–2018)",
+    title = "Mapa de calor de víctimas de homicidios por mes y año (1985–2018)",
     x = "Año",
     y = "Mes",
     fill = "Número de víctimas"
