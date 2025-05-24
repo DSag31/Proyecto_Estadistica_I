@@ -14,6 +14,8 @@ library(scales)
 library(viridis)
 library(knitr)
 library(lubridate)
+library(stringr)
+
 
 #Análisis del número de afectados entre los años 1985 a 2018 (secuestros)
 #Gráfica : Histograma. 
@@ -161,16 +163,7 @@ ggplot(map_data) +
 ################################# ANALISIS 3 ################################
 
 
-# Instalar librerías si hace falta
-install.packages(c("sf", "tidyr", "RColorBrewer"))  # si no se tienen
 
-# Cargar librerías
-library(arrow)    
-library(dplyr)    
-library(sf)       
-library(ggplot2)  
-library(tidyr)    
-library(RColorBrewer)
 
 # 1. Lee los datos de homicidios y se cuenta por municipio
 
@@ -747,3 +740,4 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
     axis.text.x  = element_blank(),    # quita las etiquetas del eje X
     axis.ticks.x = element_blank()     # quita los ticks del eje X
   )
+
