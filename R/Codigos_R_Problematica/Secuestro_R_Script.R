@@ -24,9 +24,6 @@ library(stringr)
 datos <- read_parquet("C:/Datos_limpios/datosLimpios-secuestro-R100.parquet")
 #ANTES DE USAR EL RESTO DEL CODIGO 
 
-# 1. Leer el archivo Parquet de secuestro
-
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-secuestro-R100.parquet")
 
 # 2. Filtrar el rango de años de interés y contar víctimas por año
 sc_por_ano <- datos %>%
