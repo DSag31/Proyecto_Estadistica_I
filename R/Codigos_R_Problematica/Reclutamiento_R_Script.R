@@ -14,6 +14,8 @@ library(scales)
 library(viridis)
 library(knitr)
 library(lubridate)
+library(stringr)
+
 
 ##################################Carga de Datos#########################################################
 
@@ -724,3 +726,4 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
     axis.text.x  = element_blank(),    # quita las etiquetas del eje X
     axis.ticks.x = element_blank()     # quita los ticks del eje X
   )
+
