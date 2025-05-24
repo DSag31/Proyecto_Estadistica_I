@@ -548,7 +548,7 @@ ggplot(resumen_adolecencia, aes(x = dept_nombre, y = n_victimas)) +
   labs(
     title = "Victimas (homicidio) en la categoria de ADOLESCENCIA por departamento",
     x     = "Departamento",
-    y     = "Número de víctimas (ADOLECENCIA)"
+    y     = "Número de víctimas (ADOLESCENCIA)"
   ) +
   theme_minimal(base_size = 12) +
   theme(
