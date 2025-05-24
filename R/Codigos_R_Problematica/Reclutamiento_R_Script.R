@@ -417,7 +417,7 @@ ggplot(top10_guerrilla, aes(x = reorder(p_str, n), y = n, fill = p_str)) +
   geom_col(show.legend = FALSE) +
   coord_flip() +
   labs(
-    title = "Guerrillas que más afectan a los ciudadanos",
+    title = "Guerrillas que más afectan a los ciudadanos (reclutamiento) ",
     x = "Guerrilla",
     y = "Número de casos"
   ) +
