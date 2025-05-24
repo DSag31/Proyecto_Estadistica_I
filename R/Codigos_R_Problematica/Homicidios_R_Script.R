@@ -525,7 +525,7 @@ resumen_infancia <- df_infancia %>%
 ggplot(resumen_infancia, aes(x = dept_nombre, y = n_victimas)) +
   geom_col(fill = "#D53E4F") +
   labs(
-    title = "Victimas en la categoria de INFANCIA por departamento",
+    title = "Victimas (homicidio) en la categoria de INFANCIA por departamento",
     x     = "Departamento",
     y     = "Número de víctimas (INFANCIA)"
   ) +
@@ -546,7 +546,7 @@ resumen_adolecencia <- df_adolecencia %>%
 ggplot(resumen_adolecencia, aes(x = dept_nombre, y = n_victimas)) +
   geom_col(fill = "#D53E4F") +
   labs(
-    title = "Victimas en la categoria de ADOLECENCIA por departamento",
+    title = "Victimas (homicidio) en la categoria de ADOLESCENCIA por departamento",
     x     = "Departamento",
     y     = "Número de víctimas (ADOLECENCIA)"
   ) +
@@ -567,7 +567,7 @@ resumen_adultez <- df_adultez %>%
 ggplot(resumen_adultez, aes(x = dept_nombre, y = n_victimas)) +
   geom_col(fill = "#D53E4F") +
   labs(
-    title = "Victimas en la categoria de ADULTEZ por departamento",
+    title = "Victimas (homicidio) en la categoria de ADULTEZ por departamento",
     x     = "Departamento",
     y     = "Número de víctimas (Adultez)"
   ) +
@@ -600,7 +600,7 @@ datos <- datos %>%
 ggplot(datos, aes(x = edad_media)) +
   geom_histogram(aes(y = ..density..), bins = 20, fill = "steelblue", alpha = 0.6) +
   geom_density(color = "red", size = 1.2, adjust = 4) +  # ¡Más suave todavía!
-  labs(title = "Distribución de edades de víctimas de homicidio",
+  labs(title = "Distribución  de edades de víctimas de homicidio",
        x = "Edad (estimada)",
        y = "Densidad") +
   theme_minimal()
@@ -714,7 +714,7 @@ df_box <- data.frame(age = vector_edades)
 ggplot(df_box, aes(x = factor(1), y = age)) +
   geom_boxplot(fill = "#69b3a2", color = "black", outlier.colour = "red") +
   labs(
-    title = "Boxplot de edades (punto medio de intervalos)",
+    title = "Boxplot de edades  homicidios (punto medio de intervalos)",
     y     = "Edad aproximada",
     x     = NULL
   ) +
