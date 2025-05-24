@@ -550,7 +550,7 @@ resumen_infancia <- df_infancia %>%
 ggplot(resumen_infancia, aes(x = dept_nombre, y = n_victimas)) +
   geom_col(fill = "#D53E4F") +
   labs(
-    title = "Victimas (secuestro)en la categoria de INFANCIA por departamento",
+    title = "Victimas (secuestro) en la categoria de INFANCIA por departamento",
     x     = "Departamento",
     y     = "Número de víctimas (INFANCIA)"
   ) +
@@ -571,7 +571,7 @@ resumen_adolecencia <- df_adolecencia %>%
 ggplot(resumen_adolecencia, aes(x = dept_nombre, y = n_victimas)) +
   geom_col(fill = "#D53E4F") +
   labs(
-    title = "Victimas (secuestro) en la categoria de ADOLECENCIA por departamento",
+    title = "Victimas (secuestro) en la categoria de ADOLESCENCIA por departamento",
     x     = "Departamento",
     y     = "Número de víctimas (ADOLESCENCIA)"
   ) +
