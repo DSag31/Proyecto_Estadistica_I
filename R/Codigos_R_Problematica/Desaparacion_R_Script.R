@@ -438,7 +438,7 @@ conteo_sexo <- conteo_sexo %>%
 ggplot(conteo_sexo, aes(x = "", y = n, fill = sexo)) +
   geom_bar(stat = "identity", width = 1) +
   coord_polar("y") +
-  labs(title = "Proporción de  por sexo") +
+  labs(title = "Proporción de desapariciones por sexo") +
   theme_void() +  # Elimina ejes y fondo
   geom_text(aes(label = etiqueta), position = position_stack(vjust = 0.5)) +
   scale_fill_manual(values = c("HOMBRE" = "steelblue", "MUJER" = "salmon"))
