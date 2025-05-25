@@ -74,10 +74,10 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
 ##################################Pregunta 2#########################################################
 #Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos
 
-# MAPA DE CALOR SECUESTROS 
+# MAPA DE CALOR Reclutamientos 
 
 
-# 1. Leer datos de secuestro
+# 1. Leer datos de Reclutamiento
 casos_dept <- datos %>%
   mutate(dept_code_hecho = sprintf("%02d", as.integer(dept_code_hecho))) %>%
   group_by(dept_code_hecho) %>%
@@ -140,7 +140,7 @@ ggplot(map_data) +
   ) +
   
   labs(
-    title = "Mapa de calor víctimas de secuestro por departamento (1985–2018)"
+    title = "Mapa de calor víctimas de Reclutamiento por departamento (1985–2018)"
   ) +
   theme_void() +
   theme(
