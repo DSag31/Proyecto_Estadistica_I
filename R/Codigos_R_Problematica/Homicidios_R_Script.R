@@ -72,85 +72,83 @@ ggplot(df_por_ano, aes(x = yy_hecho, y = n_victimas)) +
 ##################################Pregunta 2#########################################################
 #Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos
 
+# MAPA DE CALOR Homicidios 
+
+
+# 1. Leer datos de Homicidio
 casos_dept <- datos %>%
   mutate(dept_code_hecho = sprintf("%02d", as.integer(dept_code_hecho))) %>%
   group_by(dept_code_hecho) %>%
   summarise(n_victimas = n(), .groups = "drop")
 
-# 1. Lee el GeoPackage de departamentos de Colombia
+# 2. Leer el GeoPackage
 gdf_dept <- st_read("C:/Datos_limpios/gadm41_COL.gpkg", layer = "ADM_ADM_1") %>%
   st_transform(4326)
 
-# 2. Diccionario nombre → código DANE
+# 3. Diccionario nombre → código DANE
 nombre_codigos <- c(
-  "Amazonas"                     = "91",
-  "Antioquia"                    = "05",
-  "Arauca"                       = "81",
-  "Atlántico"                    = "08",
-  "Bogotá D.C."                  = "11",
-  "Bolívar"                      = "13",
-  "Boyacá"                       = "15",
-  "Caldas"                       = "17",
-  "Caquetá"                      = "18",
-  "Casanare"                     = "85",
-  "Cauca"                        = "19",
-  "Cesar"                        = "20",
-  "Chocó"                        = "27",
-  "Córdoba"                      = "23",
-  "Cundinamarca"                 = "25",
-  "Guainía"                      = "94",
-  "Guaviare"                     = "95",
-  "Huila"                        = "41",
-  "La Guajira"                   = "44",
-  "Magdalena"                    = "47",
-  "Meta"                         = "50",
-  "Nariño"                       = "52",
-  "Norte de Santander"           = "54",
-  "Putumayo"                     = "86",
-  "Quindío"                      = "63",
-  "Risaralda"                    = "66",
-  "San Andrés y Providencia"     = "88",
-  "Santander"                    = "68",
-  "Sucre"                        = "70",
-  "Tolima"                       = "73",
-  "Valle del Cauca"              = "76",
-  "Vaupés"                       = "97",
-  "Vichada"                      = "99"
+  "Amazonas" = "91", "Antioquia" = "05", "Arauca" = "81", "Atlántico" = "08",
+  "Bogotá D.C." = "11", "Bolívar" = "13", "Boyacá" = "15", "Caldas" = "17",
+  "Caquetá" = "18", "Casanare" = "85", "Cauca" = "19", "Cesar" = "20",
+  "Chocó" = "27", "Córdoba" = "23", "Cundinamarca" = "25", "Guainía" = "94",
+  "Guaviare" = "95", "Huila" = "41", "La Guajira" = "44", "Magdalena" = "47",
+  "Meta" = "50", "Nariño" = "52", "Norte de Santander" = "54", "Putumayo" = "86",
+  "Quindío" = "63", "Risaralda" = "66", "San Andrés y Providencia" = "88",
+  "Santander" = "68", "Sucre" = "70", "Tolima" = "73", "Valle del Cauca" = "76",
+  "Vaupés" = "97", "Vichada" = "99"
 )
 
-# 3. Asigna el código a cada polígono
-#    Sustituye NAME_1 por el nombre correcto de la columna de tu GPKG
+# 4. Asignar códigos
 gdf_dept <- gdf_dept %>%
   mutate(dept_code_hecho = nombre_codigos[as.character(NAME_1)])
 
-# 4. Une y completa NA con cero
+# 5. Unir y completar NA
 map_data <- gdf_dept %>%
   left_join(casos_dept, by = "dept_code_hecho") %>%
   replace_na(list(n_victimas = 0))
 
-# 5. Dibuja el mapa
-
+# 6. Dibujar mapa
 ggplot(map_data) +
   geom_sf(aes(fill = n_victimas), color = "gray80", size = 0.2) +
   
-
-  #scale_fill_viridis_c(name = "N° víctimas", option = "magma", direction = -1) +
-
   scale_fill_gradientn(
     name = "N° víctimas",
-    colours = rev(rainbow(10)),    # 10 colores del arcoíris
+    colours = rev(rainbow(10)),  # 10 colores del arcoíris
     na.value = "white"
   ) +
   
+  # Nombres de departamentos (excepto San Andrés y Providencia)
+  geom_sf_text(
+    data = map_data %>% filter(NAME_1 != "San Andrés y Providencia"),
+    aes(label = NAME_1),
+    size = 2.5,
+    color = "black",
+    fontface = "bold",
+    fun.geometry = function(x) st_centroid(x, of_largest = TRUE)
+  ) +
+  
+  # Nombre de San Andrés y Providencia (ajustado hacia arriba)
+  geom_sf_text(
+    data = map_data %>% filter(NAME_1 == "San Andrés y Providencia"),
+    aes(label = NAME_1),
+    size = 2.5,
+    color = "black",
+    fontface = "bold",
+    nudge_y = 0.3
+  ) +
+  
   labs(
-    title    = "Mapa de calor victimas de homicidio por departamento (1985–2018)"
+    title = "Mapa de calor víctimas de Homicidio por departamento (1985–2018)"
   ) +
   theme_void() +
   theme(
-    plot.title    = element_text(size = 16, face = "bold", hjust = 0.5),
-    plot.subtitle = element_text(size = 12, hjust = 0.5),
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
     legend.position = "right"
   )
+
+
+
+
 ##################################Pregunta 3#########################################################
 #¿Qué tal está la situación de Bucaramanga? (mapa de calor de los municipios de santander, enfocándonos en la región de santander)
 
