@@ -73,11 +73,11 @@ El periodo entre finales de los años 90 y mediados de los 2000 fue el más crí
 ### 10.¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
 ### 11.¿La distribución de las edades esta sesgada mas a la parte de Infacncia o adultos?
 ### 12.Si conviertes edad categoría a numérica, ¿cuál es la edad promedio de las víctimas?
--a. en promedio, que edades han sido afectadas
--b. varianza y desviacion estandar
--c. Aplicando los cuartiles, ¿que podemos deducir?
--d. y su sesgo?
--e. que hay de su kurtosis?
+- a. en promedio, que edades han sido afectadas
+- b. varianza y desviacion estandar
+- c. Aplicando los cuartiles, ¿que podemos deducir?
+- d. y su sesgo?
+- e. que hay de su kurtosis?
 
 # CONCLUSIÓN 
 # REFERENCIAS
