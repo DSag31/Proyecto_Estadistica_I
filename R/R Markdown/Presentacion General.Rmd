@@ -70,6 +70,9 @@ La gráfica de secuestros refleja un aumento gradual desde los 80, con un pico e
 El periodo entre finales de los años 90 y mediados de los 2000 fue el más crítico en términos de violencia generalizada en Colombia, reflejado en el aumento simultáneo de homicidios, desapariciones, secuestros y reclutamientos. A partir de 2006-2010, se observa una disminución y estabilización en la mayoría de estas formas de violencia, lo que sugiere un cambio significativo en el contexto del conflicto armado y la seguridad pública del país.
 
 ### 2\. Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos? 
+
+
+
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/2_Desapariciones.png)
 
 - Antioquia presenta el mayor número de víctimas de desaparición, en gran medida por su amplia red de carreteras y su posición como cruce de múltiples subregiones (Magdalena Medio, Urabá, Oriente), lo que facilita tanto la movilidad de personas como de actores armados.
@@ -98,8 +101,42 @@ Meta lidera los registros de homicidio, quizás vinculado a su ubicación en la 
 - Al otro extremo, Boyacá, La Guajira y San Andrés y Providencia registran muy pocos casos, dado su menor tamaño poblacional, mayor cohesión comunitaria y en algunos casos una economía basada en servicios turísticos o agropecuarios de pequeña escala.
 
 
+
+
+
 ![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/2_reclutamiento.png)
+Reclutamientos  
+
+- El departamento de Meta vuelve a destacar con el mayor número de víctimas de reclutamiento, reforzando su papel como corredor de movilidad entre los Llanos Orientales y la Región Andina.
+
+
+- Caquetá y Cauca también presentan niveles notables; sus territorios selváticos y de montaña, con presencia de cultivos de uso ilícito y escasa oferta educativa en áreas rurales, configuran un caldo de cultivo para la captación forzada de jóvenes.
+
+
+- En departamentos de la Orinoquía como Vichada y Guainía, los índices son muy bajos; la baja concentración poblacional y la dispersión de caseríos actúan como contención natural.
+
+
+- Santander y Norte de Santander muestran valores intermedios: sus municipios conectados por la vía Troncal del Norte y por puertos sobre el Magdalena han vivido dinámicas de reclutamiento en trayectos donde la presencia estatal era débil.
+
+
+
+
+
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/2_secuestro.png)
+
+ Secuestros  
+ 
+- Antioquia encabeza claramente los casos de secuestro, reforzando su complejidad territorial —desde el Urabá hasta el Oriente antioqueño— y la densidad de carreteras que conectan con el Eje Cafetero y la Costa Atlántica.
+
+
+- Meta, Cauca y Caquetá registran cifras altas a medias, reflejo de corredores estratégicos fluviales y viales (ríos Ariari y Magdalena, carreteras de la Amazonía), donde los secuestros funcionaban como medio de financiamiento o presión.
+
+
+- Departamentos del norte del país como La Guajira, Magdalena y Atlántico tienen valores bajos; aunque son regiones de tránsito, la menor presencia de cultivos ilícitos y la concentración urbana en ciudades clave redujeron la incidencia de secuestros masivos.
+
+- Las regiones más apartadas —Vaupés, Guaviare, Guainía— aparecen con mínimos registros, congruente con su aislamiento geográfico y con comunidades que, por su estructura comunitaria tradicional, implican mayores costos operativos para secuestradores.
+
+
 
 ### 9.¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos )
 ### 10.¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
