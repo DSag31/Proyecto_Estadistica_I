@@ -69,7 +69,7 @@ La gráfica de secuestros refleja un aumento gradual desde los 80, con un pico e
 
 El periodo entre finales de los años 90 y mediados de los 2000 fue el más crítico en términos de violencia generalizada en Colombia, reflejado en el aumento simultáneo de homicidios, desapariciones, secuestros y reclutamientos. A partir de 2006-2010, se observa una disminución y estabilización en la mayoría de estas formas de violencia, lo que sugiere un cambio significativo en el contexto del conflicto armado y la seguridad pública del país.
 
-### 2\. Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos? 
+### 2\. Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?
 
 
 
