@@ -520,7 +520,7 @@ Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún
 - d. y su sesgo?
 - e. que hay de su kurtosis?
 
-## **1\. DESAPARICIONES**
+### **1\. DESAPARICIONES**
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.1_desapariciones.png)
 
 *  **Parámetros Estadísticos:**
