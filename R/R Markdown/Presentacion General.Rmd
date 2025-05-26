@@ -463,7 +463,7 @@ Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún
 - e. que hay de su kurtosis?
 
 
-*  ##  **1\. DESAPARICIONES**
+## **1\. DESAPARICIONES**
 
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.1_desapariciones.png)
 
@@ -487,9 +487,8 @@ Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún
 
   *  **Curtosis (1.8684):** Un valor de curtosis positivo (mayor que 0 para una distribución normal o, a veces, mayor que 3 si se compara con la curtosis de una normal que es 3\) indica una distribución **leptocúrtica**. Esto significa que la distribución tiene un pico más agudo y colas más pesadas (más outliers) de lo que tendría una distribución normal. En este caso, el pico se ve en los adolescentes y adultos jóvenes, y las colas se extienden.
 
-    
 
-* ##  **Histograma de Desapariciones:**
+## **Histograma de Desapariciones:**
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.2_desapariciones.png)
 
   *  Visualmente confirma la moda alrededor de los 15-19 años.
