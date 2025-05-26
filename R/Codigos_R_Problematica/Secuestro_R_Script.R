@@ -153,8 +153,6 @@ ggplot(map_data) +
 ################################# ANALISIS 3 ################################
 
 
-# 1. Cargar datos y agrupar por código de municipio
-datos <- read_parquet("C:/Datos_limpios/datosLimpios-secuestro-R100.parquet")
 
 casos_mun <- datos %>%
   mutate(muni_code_hecho = sprintf("%05d", as.integer(muni_code_hecho))) %>%
