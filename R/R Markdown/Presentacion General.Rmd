@@ -427,6 +427,8 @@ Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún
 
 * ## **Boxplot de Edades (Desapariciones) \- (No proporcionado, pero podemos inferir):**
 
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.3_desapariciones.png)
+
   *  La **caja** (que representa el rango intercuartílico, IQR) se extiende aproximadamente desde los **17-18 años (Q1)** hasta cerca de los **39 años (Q3)**.
 
   *  La línea de la **mediana (Q2)** se sitúa alrededor de los **26 años**.
@@ -435,7 +437,6 @@ Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún
 
   *  Se observan varios puntos **outliers** (representados por los puntos rojos) por encima del bigote superior, indicando víctimas de desaparición en edades significativamente mayores, que van desde los **70 años hasta cerca de los 100 años**. Esto confirma la presencia de una cola derecha en la distribución de edades para este delito y la asimetría positiva previamente mencionada.
 
-![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.3_desapariciones.png)
 
 ## **2\. HOMICIDIOS**
 
