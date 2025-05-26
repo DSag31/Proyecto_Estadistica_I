@@ -56,18 +56,25 @@ Para llevar a cabo el estudio estadístico sobre el conflicto armado en Colombia
 # DISCUCION Y DERESULTADOS
 ### 1.Análisis del número de afectados entre los años 1985 a 2018 (homicidios, secuestros, desapariciones y reclutamiento).
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/1_desapariciones.png)
-![Desapariciones](C:/Datos_limpios/ImagenesProblematica/1_homicidios.png)
-![Desapariciones](C:/Datos_limpios/ImagenesProblematica/1_reclutamiento.png)
-![Desapariciones](C:/Datos_limpios/ImagenesProblematica/1_secuestros.png)
-En la gráfica que muestra los homicidios desde 1985 hasta 2018, se puede evidenciar una tendencia a lo largo del tiempo que aumentó gradualmente hasta el año 2003 donde fue el año número con el mayor de víctimas de homicidio y empezó un periodo con una mayor incidencia que solo hasta el 2012 empezó a disminuir, también se puede evidenciar que el menor número de víctimas se observa a mediados de la década de 1980 con menos de 10.000 víctimas al año.
-
-La gráfica de desapariciones (1985-2018) muestra un aumento gradual desde la década de 1980, con un pico en 2002 (con casi 10,000 víctimas). Entre 1985 y mediados de los 90, los valores oscilaron entre 1,000 y 2,500 víctimas, creciendo notablemente desde 1995\. De 2003 a 2010, se mantuvo alta incidencia (7,500-10,000 víctimas), disminuyendo desde 2010 hasta estabilizarse en 5,000-7,500 hacia 2015-2016. El mínimo se observa en los 80, con cerca de 1,000 víctimas anuales.
-
-La gráfica de secuestros refleja un aumento gradual desde los 80, con un pico entre 2000 y 2003 (superando incluso las 6,000 víctimas). En los principios de los 90, los valores fueron muy bajos (menos de 1,000 víctimas), creciendo desde mediados de los 90\. De 2000 a 2005, se mantuvo alta incidencia (4000-6000 víctimas), disminuyendo desde 2006 a menos de 2000 víctimas hacia 2015-2018.
-
-La gráfica de reclutamiento muestra un aumento gradual desde finales de los 80, con un pico en 2001 (cerca de 1,600 víctimas). En los principios de los 90, los valores fueron bajos (menos de 200 víctimas), con un máximo intermedio en 1996 (500 víctimas). De 1998 a 2004, se mantuvo alta incidencia, disminuyendo desde 2006 y estabilizándose en 200-400 víctimas hacia 2015-2018.
+La gráfica de desapariciones (1985-2018) muestra un aumento gradual desde la década de 1980, con un pico en 2002 (con casi 10,000 víctimas). Entre 1985 y mediados de los 90, los valores oscilaron entre 1,000 y 2,500 víctimas, creciendo notablemente desde 1995\. De 2003 a 2010, se mantuvo alta incidencia (7,500-10,000 víctimas), disminuyendo desde 2010 hasta estabilizarse en 5,000-7,500 hacia 2015-2016. El mínimo se observa en los 80, con cerca de 1,000 víctimas anuales.   
+  
+![Homicidio](C:/Datos_limpios/ImagenesProblematica/1_homicidios.png)
+En la gráfica que muestra los homicidios desde 1985 hasta 2018, se puede evidenciar una tendencia a lo largo del tiempo que aumentó gradualmente hasta el año 2003 donde fue el año número con el mayor de víctimas de homicidio y empezó un periodo con una mayor incidencia que solo hasta el 2012 empezó a disminuir, también se puede evidenciar que el menor número de víctimas se observa a mediados de la década de 1980 con menos de 10.000 víctimas al año.  
+  
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/1_reclutamiento.png)
+La gráfica de reclutamiento muestra un aumento gradual desde finales de los 80, con un pico en 2001 (cerca de 1,600 víctimas). En los principios de los 90, los valores fueron bajos (menos de 200 víctimas), con un máximo intermedio en 1996 (500 víctimas). De 1998 a 2004, se mantuvo alta incidencia, disminuyendo desde 2006 y estabilizándose en 200-400 víctimas hacia 2015-2018. 
+  
+![Secuestro](C:/Datos_limpios/ImagenesProblematica/1_secuestros.png)
+La gráfica de secuestros refleja un aumento gradual desde los 80, con un pico entre 2000 y 2003 (superando incluso las 6,000 víctimas). En los principios de los 90, los valores fueron muy bajos (menos de 1,000 víctimas), creciendo desde mediados de los 90\. De 2000 a 2005, se mantuvo alta incidencia (4000-6000 víctimas), disminuyendo desde 2006 a menos de 2000 víctimas hacia 2015-2018.  
 
 El periodo entre finales de los años 90 y mediados de los 2000 fue el más crítico en términos de violencia generalizada en Colombia, reflejado en el aumento simultáneo de homicidios, desapariciones, secuestros y reclutamientos. A partir de 2006-2010, se observa una disminución y estabilización en la mayoría de estas formas de violencia, lo que sugiere un cambio significativo en el contexto del conflicto armado y la seguridad pública del país.
+
+<<<<<<< HEAD
+### 2\. Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos? 
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/2_Desapariciones.png)
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/2_homicidio.png)
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/2_reclutamiento.png)
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/2_secuestro.png)
 
 ### 9.¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos )
 ### 10.¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
