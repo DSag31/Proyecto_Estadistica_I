@@ -310,7 +310,19 @@ Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún
 - e. que hay de su kurtosis?
 
 # CONCLUSIÓN 
+A partir del análisis estadístico de las principales manifestaciones del conflicto armado en Colombia —homicidios, desapariciones, secuestros y reclutamientos— se pueden extraer las siguientes conclusiones fundamentales:
+- El conflicto armado colombiano se manifestó de forma intensiva: tanto en el tiempo como en el territorio nacional. Las formas más crudas de violencia alcanzaron sus picos más críticos entre los años 1997 y 2005, evidenciando un periodo particularmente sangriento y complejo en la historia reciente del país. Por un lado los homicidios y secuestros evidenciaron incrementos graduales desde los años 80, con máximos alrededor del año 2000. Las desapariciones también alcanzaron cifras alarmantes hacia 2002, mientras que el reclutamiento forzado mostró su punto más alto en 2001. Aunque a partir de 2006 se observa una reducción progresiva en las cifras, las consecuencias del conflicto persisten.
+- Geográficamente, el conflicto se concentró en departamentos específicos, con Antioquia liderando en casi todas las formas de violencia analizadas. Otros departamentos como Meta, Caquetá, Valle del Cauca, Cauca y Norte de Santander también se identifican como epicentros, coincidiendo con zonas históricas de confrontación armada, economías ilícitas y débil presencia institucional.
+- La violencia afectó de manera desproporcionada a ciertas franjas, donde los adolescentes fueron especialmente vulnerables a desapariciones y reclutamientos, mientras que los adultos jóvenes (20-24 años) concentraron la mayor parte de los homicidios. El secuestro afectó más a adultos entre 30 y 40 años. Además, resulta especialmente alarmante la alta incidencia de violencia sobre menores de edad.
+- El análisis por sexo mostró una afectación principalmente masculina, con más del 90% de las víctimas de homicidio siendo hombres. Sin embargo, en el delito de reclutamiento, la proporción de mujeres víctimas fue la más alta comparativamente (31.8%), revelando un patrón de vulnerabilidad que merece especial atención.
+- En términos étnicos, aunque la población mestiza fue la más afectada en cifras absolutas, los grupos indígenas y NARP (Negros, Afrocolombianos, Raizales y Palenqueros) fueron desproporcionadamente impactados en el delito de reclutamiento forzado, lo cual pone de manifiesto desigualdades estructurales y dinámicas de exclusión histórica.
+- Los actores armados tuvieron responsabilidades diferenciadas según el delito. Los grupos paramilitares fueron los principales responsables de homicidios y desapariciones, mientras que las FARC-EP se consolidaron como el principal actor en reclutamientos y secuestros. Esta diferenciación evidencia las diversas lógicas de guerra aplicadas: eliminación, intimidación, control territorial y financiación. Las distintas formas  de violencia mencionadas anteriormente no fueron aleatorias, sino que respondieron a estrategias sistemáticas por parte de los actores armados. Los homicidios reflejan una lógica de eliminación del enemigo, las desapariciones una estrategia de control social e intimidación, los secuestros un medio de financiación y presión política, y el reclutamiento, una táctica para fortalecer las filas y controlar territorio.
+
+En síntesis, el conflicto armado colombiano no solo dejó una profunda huella cuantificable en términos de víctimas, sino que reveló patrones consistentes de violencia estructural, con impactos diferenciados por territorio, edad, sexo y etnia. La comprensión de estas dinámicas es esencial para el reconocimiento de las víctimas, la memoria histórica y la formulación de políticas de reparación y no repetición.
+
 # REFERENCIAS
+- https://microdatos.dane.gov.co/index.php/catalog/795
+- https://gadm.org/download_country.html
  
 ##### Ejemplos de proyectos similares  
 - https://rpubs.com/KarenR/1071781   
