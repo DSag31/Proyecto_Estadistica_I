@@ -83,8 +83,21 @@ El periodo entre finales de los años 90 y mediados de los 2000 fue el más crí
 
 
 
-
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/2_homicidio.png)
+Homicidios  
+
+Meta lidera los registros de homicidio, quizás vinculado a su ubicación en la vía Bogotá–Villavicencio y a la existencia de zonas rurales de transición (valles interandinos) con economías agrícolas de gran escala, escenario propicio para disputas territoriales.
+
+
+- Antioquia y Cauca aparecen con cifras elevadas, ambos comparten una orografía compleja (mesetas, montañas) y actividades agrícolas que, por la competencia sobre tierra, han contribuido a focos de violencia.
+
+
+- Departamentos como Nariño, Putumayo y Chocó muestran valores moderados: son regiones montañosas y selváticas, donde la fragmentación de los asentamientos complica tanto el accionar institucional como la circulación de información sobre homicidios.
+
+
+- Al otro extremo, Boyacá, La Guajira y San Andrés y Providencia registran muy pocos casos, dado su menor tamaño poblacional, mayor cohesión comunitaria y en algunos casos una economía basada en servicios turísticos o agropecuarios de pequeña escala.
+
+
 ![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/2_reclutamiento.png)
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/2_secuestro.png)
 
