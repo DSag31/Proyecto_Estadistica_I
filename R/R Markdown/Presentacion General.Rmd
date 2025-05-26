@@ -388,6 +388,252 @@ Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún
 - d. y su sesgo?
 - e. que hay de su kurtosis?
 
+## **1\. DESAPARICIONES**
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.1_desapariciones.png)
+
+*  **Parámetros Estadísticos:**
+
+  *  **Media (31.17 años):** En promedio, la edad de las víctimas de desaparición es de aproximadamente 31 años.
+
+  *  **Moda (17 años):** La edad más frecuente entre las víctimas de desaparición es 17 años. Esto concuerda con el histograma que muestra el pico en la categoría 15-19.
+
+  *  **Mediana (26.23 años):** El 50% de las víctimas de desaparición tienen 26.23 años o menos, y el otro 50% tiene más. Que la mediana sea menor que la media sugiere una distribución con una cola hacia la derecha (edades mayores).
+
+  *  **Varianza (389.75) y Desviación estándar (21.23 años):** Indican una dispersión considerable de las edades alrededor de la media. Hay una amplia gama de edades afectadas.
+
+  *  **Q1 (17.17 años):** El 25% de las víctimas de desaparición tienen 17.17 años o menos.
+
+  *  **Q3 (38.76 años):** El 75% de las víctimas de desaparición tienen 38.76 años o menos (o, el 25% superior tiene más de 38.76 años).
+
+  *  **IQR (Rango Intercuartílico: 21.59 años):** El 50% central de las víctimas de desaparición se encuentra en un rango de edad de 21.59 años (aproximadamente entre 17 y 39 años).
+
+  *  **Asimetría (1.3834):** Un valor positivo indica una **asimetría positiva (hacia la derecha)**. Esto significa que hay una cola más larga de víctimas en las edades mayores, lo cual es consistente con el histograma que, aunque tiene su pico en la adolescencia, se extiende con frecuencias considerables hacia la adultez.
+
+  *  **Curtosis (1.8684):** Un valor de curtosis positivo (mayor que 0 para una distribución normal o, a veces, mayor que 3 si se compara con la curtosis de una normal que es 3\) indica una distribución **leptocúrtica**. Esto significa que la distribución tiene un pico más agudo y colas más pesadas (más outliers) de lo que tendría una distribución normal. En este caso, el pico se ve en los adolescentes y adultos jóvenes, y las colas se extienden.
+
+    
+
+*  **Histograma de Desapariciones:**
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.2_desapariciones.png)
+
+  *  Visualmente confirma la moda alrededor de los 15-19 años.
+
+  *  Muestra una concentración alta también en los rangos de 20-24 y 25-29 años.
+
+  *  La distribución tiene una cola hacia la derecha, con frecuencias que disminuyen pero persisten en edades más avanzadas, y un repunte en las edades muy altas (95-100), lo que podría influir en la media y la asimetría.
+
+  *  El grupo 0-4 años también tiene una frecuencia notable.
+
+
+* ## **Boxplot de Edades (Desapariciones) \- (No proporcionado, pero podemos inferir):**
+
+  *  La **caja** (que representa el rango intercuartílico, IQR) se extiende aproximadamente desde los **17-18 años (Q1)** hasta cerca de los **39 años (Q3)**.
+
+  *  La línea de la **mediana (Q2)** se sitúa alrededor de los **26 años**.
+
+  *  El bigote inferior se extiende hasta edades muy tempranas, cercanas a 0, mientras que el bigote superior alcanza aproximadamente los 65-70 años.
+
+  *  Se observan varios puntos **outliers** (representados por los puntos rojos) por encima del bigote superior, indicando víctimas de desaparición en edades significativamente mayores, que van desde los **70 años hasta cerca de los 100 años**. Esto confirma la presencia de una cola derecha en la distribución de edades para este delito y la asimetría positiva previamente mencionada.
+
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.3_desapariciones.png)
+
+## **2\. HOMICIDIOS**
+
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/12.1_homicidios.png)
+
+* **Parámetros Estadísticos:**
+
+  * **Media (33.58 años):** La edad promedio de las víctimas de homicidio es de aproximadamente 33-34 años.
+
+  * **Moda (22 años):** La edad más frecuente es 22 años, lo que corresponde al pico en el histograma en la categoría 20-24.
+
+  * **Mediana (28.76 años):** El 50% de las víctimas de homicidio tienen 28.76 años o menos. Nuevamente, la mediana es menor que la media, sugiriendo asimetría positiva.
+
+  * **Varianza (389.75) y Desviación estándar (19.74 años):** Similar dispersión a las desapariciones, aunque la desviación estándar es un poco menor.
+
+  * **Q1 (21.61 años):** El 25% de las víctimas tienen 21.61 años o menos.
+
+  * **Q3 (41.09 años):** El 75% de las víctimas tienen 41.09 años o menos.
+
+  * **IQR (19.48 años):** El 50% central de las víctimas de homicidio se encuentra en un rango de edad de aproximadamente 19.5 años (entre 21.6 y 41.1 años).
+
+  * **Asimetría (1.4013):** Asimetría positiva, indicando una cola hacia las edades mayores.
+
+  * **Curtosis (2.3931):** Distribución leptocúrtica, con un pico más pronunciado y colas más pesadas que una normal.
+
+
+* ## **Histograma de Homicidios:**
+
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/12.2_homicidios.png)
+
+  *  El pico es claramente en la categoría 20-24 años.
+
+  *  Altas frecuencias en 25-29 y 30-34 años.
+
+  *  También muestra una cola hacia la derecha y un repunte en las edades muy avanzadas (95-100).
+
+  *  El grupo 0-4 años es significativo.
+
+
+* ## **Boxplot de Edades Homicidios (Proporcionado):**
+
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/12.3_homicidios.png)
+
+  *  La caja se extiende aproximadamente desde los 21-22 años hasta los 41 años.
+
+  *  La línea mediana está cerca de los 29 años.
+
+  *  **Outliers:** Se observan varios puntos por encima del bigote superior, indicando víctimas de homicidio en edades significativamente mayores que el grueso de los datos (parecen estar entre los 75 y los 100 años, según la escala). Esto confirma la cola derecha y la curtosis.
+
+
+## **3\. RECLUTAMIENTOS**
+
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/12.1_reclutamiento.png)
+
+*  **Parámetros Estadísticos:**
+
+  *  **Media (16.09 años):** La edad promedio de las víctimas de reclutamiento es muy baja, alrededor de los 16 años.
+
+  *  **Moda (17 años):** La edad más frecuente es 17 años (categoría 15-19).
+
+  *  **Mediana (15.93 años):** Muy cercana a la media y la moda, lo que sugiere una distribución más concentrada, aunque la asimetría nos dirá más.
+
+  *  **Varianza (72.59) y Desviación estándar (8.52 años):** Mucho menor dispersión que en desapariciones y homicidios, lo que indica que las edades de reclutamiento están más agrupadas.
+
+  *  **Q1 (12.38 años):** El 25% de las víctimas de reclutamiento tienen 12.38 años o menos (¡niños\!).
+
+  *  **Q3 (17.83 años):** El 75% de las víctimas tienen 17.83 años o menos (mayormente adolescentes).
+
+  *  **IQR (5.45 años):** El 50% central de las víctimas se encuentra en un rango muy estrecho de solo 5.45 años (aproximadamente entre 12 y 18 años).
+
+  *  **Asimetría (5.1517):** Un valor de asimetría muy alto y positivo. Esto indica una fuerte cola hacia la derecha. Aunque el grueso de los reclutados son niños y adolescentes, hay casos que se extienden a edades mayores, pero son menos frecuentes.
+
+  *  **Curtosis (42.9454):** Un valor de curtosis extremadamente alto. Esto indica una distribución muy puntiaguda (leptocúrtica) con colas muy pesadas. El pico es muy pronunciado en la adolescencia, y hay outliers significativos.
+
+
+* ## **Histograma de Reclutamientos:**
+
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/12.2_reclutamiento.png)
+
+  *  Pico dominante en la categoría 15-19 años, seguido por 10-14 años.
+
+  *  Frecuencias muy bajas para edades mayores de 20-24 años.
+
+  *  El grupo 0-4 años también muestra algunos casos.
+
+  *  La fuerte asimetría y curtosis se explican porque la mayoría de los casos están en un rango de edad muy joven, pero existen algunos casos dispersos en edades mayores que "estiran" la cola derecha.
+
+
+* ## **Boxplot de Edades Reclutamiento (Proporcionado):**
+
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/12.3_reclutamiento.png)
+
+  *  La caja es muy compacta y se sitúa en edades muy tempranas (aproximadamente entre 12 y 18 años).
+
+  *  La mediana está alrededor de los 16 años.
+
+  *  **Outliers:** Se observan muchísimos outliers por encima del bigote superior, extendiéndose hasta edades muy avanzadas (incluso cercanas a los 100 años). Esto es lo que causa la alta asimetría y curtosis. Indica que, aunque el reclutamiento se centra masivamente en menores, existen casos documentados de personas mucho mayores siendo reclutadas, aunque son atípicos.
+
+
+## **4\. SECUESTROS**
+
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/12.1_secuestros.png)
+
+*  **Parámetros Estadísticos:**
+
+  *  **Media (41.61 años):** La edad promedio de las víctimas de secuestro es la más alta de los cuatro delitos, alrededor de los 41-42 años.
+
+  *  **Moda (32 años):** La edad más frecuente es 32 años (categoría 30-34).
+
+  *  **Mediana (36.12 años):** El 50% de las víctimas tienen 36.12 años o menos. La media es mayor que la mediana, sugiriendo asimetría positiva.
+
+  *  **Varianza (682.16) y Desviación estándar (26.12 años):** La mayor varianza y desviación estándar, indicando la mayor dispersión de edades entre los delitos.
+
+  *  **Q1 (23.45 años):** El 25% de las víctimas tienen 23.45 años o menos.
+
+  *  **Q3 (51.69 años):** El 75% de las víctimas tienen 51.69 años o menos.
+
+  *  **IQR (28.24 años):** El 50% central de las víctimas se encuentra en un rango amplio de 28.24 años (aproximadamente entre 23.5 y 51.7 años).
+
+  *  **Asimetría (0.8955):** Asimetría positiva, pero menos pronunciada que en desapariciones y homicidios.
+
+  *  **Curtosis (0.0569):** Un valor de curtosis muy cercano a cero. Si se compara con una normal (curtosis=0 para exceso de curtosis, o kurtosis=3 para curtosis estándar), esto podría indicar una distribución **mesocúrtica** (similar a una normal en términos de pico y colas) o incluso ligeramente **platicúrtica** (más aplanada que una normal, con colas más ligeras), dependiendo de la referencia. Dado el histograma, parece más mesocúrtica o ligeramente platicúrtica en el cuerpo principal, pero con un repunte en las edades muy altas.
+
+   
+
+* ## **Histograma de Secuestros:**
+
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/12.2_secuestros.png)
+
+  *  La distribución es más aplanada y extendida en la adultez, con picos en las categorías 30-34 y 35-39 años.
+
+  *  Altas frecuencias desde los 20-24 hasta los 50-54 años.
+
+  *  Tiene una caída y luego un repunte muy significativo en la categoría 95-100 años, lo que seguramente influye en la media y en la forma general.
+
+  *  El grupo 0-4 años también es visible.
+
+  
+
+* ## **Boxplot de Edades Secuestros (Proporcionado):**
+
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/12.3_secuestros.png)
+
+  *  La caja es la más ancha, extendiéndose aproximadamente desde los 23 años hasta los 52 años.
+
+  *  La mediana está alrededor de los 36 años.
+
+  *  **Outliers:** Se observa un outlier en una edad muy avanzada (cerca de los 100 años), que corresponde al repunte en el histograma.
+
+
+
+* ## **Resumen y Deducciones Generales:**
+
+* ## **Edades promedio afectadas:**
+
+  *  Reclutamiento: \~16 años (la más baja, enfocada en menores)
+
+  *  Desapariciones: \~31 años
+
+  *  Homicidios: \~33-34 años
+
+  *  Secuestros: \~41-42 años (la más alta, enfocada en adultos)
+
+
+* ## **Dispersión (Varianza/Desv. Estándar/IQR):**
+
+  *  Reclutamiento tiene la menor dispersión (edades muy concentradas).
+
+  *  Secuestros tiene la mayor dispersión (afecta a un rango de edades adultas más amplio).
+
+  *  Desapariciones y homicidios tienen una dispersión intermedia y similar entre sí.
+
+
+* ## **Forma de la Distribución (Asimetría y Curtosis):**
+
+  *  **Reclutamiento** es la más distintiva: extremadamente asimétrica a la derecha y muy leptocúrtica, debido al fuerte enfoque en menores con algunos casos atípicos en edades mayores.
+
+  *  **Desapariciones y Homicidios** muestran asimetría positiva y son leptocúrticas, indicando que, aunque los picos están en la juventud/adultez temprana, hay una cantidad considerable de víctimas mayores.
+
+  *  **Secuestros** tiene una asimetría positiva más leve y una curtosis cercana a la de una distribución normal (o ligeramente platicúrtica en su cuerpo principal), pero el repunte en edades muy altas es un rasgo particular.
+
+* ## **Cuartiles (Q1, Q3, IQR):**
+
+  *  Confirman el fuerte enfoque en **menores de edad para reclutamientos** (el 75% de las víctimas tienen menos de 18 años).
+
+  *  Para **desapariciones y homicidios**, el 50% central de las víctimas se concentra entre la adolescencia tardía/adultez temprana y la adultez media (aproximadamente 17-39 años para desapariciones y 21-41 para homicidios).
+
+  *  Para **secuestros**, el 50% central abarca un rango más amplio de la vida adulta (aproximadamente 23-52 años).
+
+
+* ## **Outliers (Cajas de Bigotes):**
+
+  * **Reclutamiento** es el que presenta la mayor cantidad y la mayor dispersión de outliers en edades avanzadas, lo que es sorprendente y merece una investigación más profunda sobre la naturaleza de esos casos.
+
+  *  **Homicidios** también muestra outliers en edades avanzadas.
+
+  *  **Secuestros**  tiene al menos un outlier muy notable en edad avanzada, que coincide con el pico en la última categoría del histograma.
+
 # CONCLUSIÓN 
 A partir del análisis estadístico de las principales manifestaciones del conflicto armado en Colombia —homicidios, desapariciones, secuestros y reclutamientos— se pueden extraer las siguientes conclusiones fundamentales:
 
