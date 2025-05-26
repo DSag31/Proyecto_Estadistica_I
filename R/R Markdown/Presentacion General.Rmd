@@ -89,17 +89,13 @@ El periodo entre finales de los años 90 y mediados de los 2000 fue el más crí
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/2_homicidio.png)
 Homicidios  
 
-Meta lidera los registros de homicidio, quizás vinculado a su ubicación en la vía Bogotá–Villavicencio y a la existencia de zonas rurales de transición (valles interandinos) con economías agrícolas de gran escala, escenario propicio para disputas territoriales.
+- Antioquia lidera los registros de homicidio, probablemente asociado a la concentración urbana en Medellín, su localización estratégica en rutas de movilidad nacional y la persistente presencia de actores armados en zonas rurales montañosas, lo que ha favorecido una violencia sostenida por el control territorial.
 
+- Valle del Cauca y Córdoba aparecen con cifras elevadas, ambos presentan corredores estratégicos: el primero con salida al Pacífico y un eje urbano denso (Cali–Palmira), el segundo con un historial de conflicto ligado a disputas por tierras, economías ganaderas y presencia de estructuras armadas que surgieron en los años noventa.
 
-- Antioquia y Cauca aparecen con cifras elevadas, ambos comparten una orografía compleja (mesetas, montañas) y actividades agrícolas que, por la competencia sobre tierra, han contribuido a focos de violencia.
+- Departamentos como Chocó, Nariño y Norte de Santander muestran valores intermedios: son zonas de frontera o con difícil acceso, donde confluyen cultivos ilícitos, minería ilegal y ausencia estatal, elementos que propician contextos de violencia crónica y altos niveles de homicidios no esclarecidos.
 
-
-- Departamentos como Nariño, Putumayo y Chocó muestran valores moderados: son regiones montañosas y selváticas, donde la fragmentación de los asentamientos complica tanto el accionar institucional como la circulación de información sobre homicidios.
-
-
-- Al otro extremo, Boyacá, La Guajira y San Andrés y Providencia registran muy pocos casos, dado su menor tamaño poblacional, mayor cohesión comunitaria y en algunos casos una economía basada en servicios turísticos o agropecuarios de pequeña escala.
-
+- Al otro extremo, Boyacá, San Andrés y Providencia y Vaupés registran muy pocos casos, en parte por su menor densidad poblacional, dinámicas socioeconómicas locales más estables y un tejido comunitario menos expuesto a economías ilegales o conflictos armados directos.
 
 
 
