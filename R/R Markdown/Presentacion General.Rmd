@@ -119,8 +119,7 @@ Reclutamientos
 
 
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/2_secuestro.png)
-
- Secuestros  
+ 
  
 - Antioquia encabeza claramente los casos de secuestro, reforzando su complejidad territorial —desde el Urabá hasta el Oriente antioqueño— y la densidad de carreteras que conectan con el Eje Cafetero y la Costa Atlántica.
 
@@ -131,6 +130,72 @@ Reclutamientos
 - Departamentos del norte del país como La Guajira, Magdalena y Atlántico tienen valores bajos; aunque son regiones de tránsito, la menor presencia de cultivos ilícitos y la concentración urbana en ciudades clave redujeron la incidencia de secuestros masivos.
 
 - Las regiones más apartadas —Vaupés, Guaviare, Guainía— aparecen con mínimos registros, congruente con su aislamiento geográfico y con comunidades que, por su estructura comunitaria tradicional, implican mayores costos operativos para secuestradores.
+
+
+
+
+
+### 3\. Mapa de calor: Referencias de los municipios afectados por  la problemática. ¿Qué municipio es el mas afectado?
+
+
+
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/3_Desapariciones.png)
+
+- Barrancabermeja concentra el mayor número de víctimas de desaparición, en gran parte por su condición de enclave industrial del Magdalena Medio, altamente disputado por actores armados ilegales que impusieron controles sociales y desplazamientos forzados como forma de dominio territorial.  
+
+- Bucaramanga y Cimitarra presentan niveles intermedios: ambas zonas combinan conectividad vial y dinamismo urbano o agroindustrial, lo que las convierte en espacios de tránsito estratégico donde las desapariciones operaron como mecanismo de silenciamiento o retaliación, particularmente en zonas periféricas.  
+
+- En contraste, municipios del sur y occidente del departamento como Albania, Bolívar o Guavatá registran muy pocos casos, posiblemente por su escasa densidad poblacional, baja relevancia geoestratégica y una estructura comunitaria más cerrada, que limitó la acción sostenida de estructuras armadas o redes de criminalidad organizada.
+
+
+
+
+
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/3_homicidio.png)
+Homicidios  
+
+- Barrancabermeja también lidera en número de homicidios, lo que refleja su papel como epicentro del conflicto armado en Santander y zona de influencia clave para el control del río Magdalena, el comercio petrolero y las rutas hacia Antioquia y el sur de Bolívar.  
+
+- Bucaramanga muestra cifras intermedia, esta ciudad ha enfrentado dinámicas de violencia asociadas a conflictos por el control de economías ilegales, crecimiento desordenado de periferias y disputas entre redes criminales locales, especialmente en sectores populares.  
+
+- Por otro lado, municipios como Charalá, Cepitá o Curití presentan niveles muy bajos de homicidio, probablemente debido a su ubicación periférica, menor tránsito interregional y una relativa estabilidad institucional que permitió mayor cohesión social y control local frente a brotes de violencia sistemática.
+
+
+
+
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/3_reclutamiento.png)
+Reclutamientos  
+
+- El departamento de Meta vuelve a destacar con el mayor número de víctimas de reclutamiento, reforzando su papel como corredor de movilidad entre los Llanos Orientales y la Región Andina.
+
+
+- Caquetá y Cauca también presentan niveles notables; sus territorios selváticos y de montaña, con presencia de cultivos de uso ilícito y escasa oferta educativa en áreas rurales, configuran un caldo de cultivo para la captación forzada de jóvenes.
+
+
+- En departamentos de la Orinoquía como Vichada y Guainía, los índices son muy bajos; la baja concentración poblacional y la dispersión de caseríos actúan como contención natural.
+
+
+- Santander y Norte de Santander muestran valores intermedios: sus municipios conectados por la vía Troncal del Norte y por puertos sobre el Magdalena han vivido dinámicas de reclutamiento en trayectos donde la presencia estatal era débil.
+
+
+
+
+
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/3_secuestro.png)
+ 
+- Barrancabermeja vuelve a figurar como el municipio con más casos de secuestro, una modalidad utilizada recurrentemente por grupos armados ilegales como mecanismo de financiación, presión política o castigo ejemplar, favorecida por la complejidad geográfica de su entorno y la debilidad institucional del pasado.  
+
+- Puerto Wilches y San Vicente de Chucurí presentan niveles intermedios: su localización en zonas rurales extensas, con presencia de corredores fluviales o montañosos, permitió el desarrollo de economías ilícitas y la consolidación de enclaves armados donde el secuestro fue empleado como estrategia de control social.  
+
+- En contraste, gran parte del sur del departamento –municipios como Gámbita, El Guacamayo o La Belleza– evidencia cifras mínimas, lo cual puede explicarse por la ausencia de rutas estratégicas, la dispersión de la población y la existencia de comunidades menos expuestas al tránsito de actores armados o redes de crimen organizado.
+
+
+
+
+
+
+
+
 
 
 ### 5\. De que edad a que edad han estado las personas mas afectadas (mayor frecuencia absoluta del intervalo)  
