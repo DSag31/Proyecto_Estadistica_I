@@ -71,6 +71,19 @@ El periodo entre finales de los años 90 y mediados de los 2000 fue el más crí
 
 ### 2\. Mapa de calor: Referencias de los departamentos afectados por  la problemática. ¿Qué departamento es el más afectado?¿En qué año se pudo ver más activa la violencia en los departamentos? 
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/2_Desapariciones.png)
+
+- Antioquia presenta el mayor número de víctimas de desaparición, en gran medida por su amplia red de carreteras y su posición como cruce de múltiples subregiones (Magdalena Medio, Urabá, Oriente), lo que facilita tanto la movilidad de personas como de actores armados.
+
+
+- Meta y Valle del Cauca muestran niveles intermedios: ambos departamentos combinan territorios llanos con zonas montañosas y cuentan con corredores viales estratégicos (la ruta Bogotá–Villavicencio y el eje Cali–Palmira), donde la dispersión de asentamientos rurales puede haber dificultado la denuncia y el registro.
+
+
+- En contraste, los departamentos de la Orinoquía (Vichada, Guainía, Vaupés) y la Amazonía (Amazonas, Caquetá, Putumayo) registran muy pocos casos, lo cual obedece a su baja densidad poblacional, difícil acceso por río o trochas, y a la presencia de comunidades más aisladas donde las redes de apoyo local actúan como barrera para las desapariciones masivas.
+
+
+
+
+
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/2_homicidio.png)
 ![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/2_reclutamiento.png)
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/2_secuestro.png)
