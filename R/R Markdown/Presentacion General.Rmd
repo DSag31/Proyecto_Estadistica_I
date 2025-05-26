@@ -463,7 +463,7 @@ Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún
 - e. que hay de su kurtosis?
 
 
-##  **1\. DESAPARICIONES**
+*  ##  **1\. DESAPARICIONES**
 
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.1_desapariciones.png)
 
@@ -489,7 +489,7 @@ Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún
 
     
 
-*  **Histograma de Desapariciones:**
+* ##  **Histograma de Desapariciones:**
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.2_desapariciones.png)
 
   *  Visualmente confirma la moda alrededor de los 15-19 años.
