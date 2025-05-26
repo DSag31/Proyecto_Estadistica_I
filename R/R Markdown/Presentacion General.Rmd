@@ -69,7 +69,7 @@ La gráfica de reclutamiento muestra un aumento gradual desde finales de los 80,
 
 El periodo entre finales de los años 90 y mediados de los 2000 fue el más crítico en términos de violencia generalizada en Colombia, reflejado en el aumento simultáneo de homicidios, desapariciones, secuestros y reclutamientos. A partir de 2006-2010, se observa una disminución y estabilización en la mayoría de estas formas de violencia, lo que sugiere un cambio significativo en el contexto del conflicto armado y la seguridad pública del país.
 
-###9.¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos )
+### 9.¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos )
 
 # CONCLUSIÓN 
 # REFERENCIAS
