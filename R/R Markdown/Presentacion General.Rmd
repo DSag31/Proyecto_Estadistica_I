@@ -402,7 +402,7 @@ Estos cuatro fenómenos de violencia no solo muestran el grado extremo de afecta
 El periodo entre 1997 y 2004 emerge como la etapa más crítica y sangrienta del conflicto armado, donde todos los tipos de violencia alcanzan sus máximos. Sin embargo, también se visibiliza una tendencia descendente en los últimos años, que coincide con esfuerzos de desmovilización, fortalecimiento institucional, acuerdos de paz y conciencia colectiva sobre el respeto por los derechos humanos.
 Aun así, la violencia no desapareció completamente, y muchas de sus secuelas siguen vigentes. Estos datos no solo deben leerse como una radiografía del pasado, sino como una herramienta para construir memoria, justicia y no repetición.
 
-### 10.¿En cuales departamentos se vieron   más afectados infancia/adolescencia/adultez de cada problematica?
+### 10\.¿En cuales departamentos se vieron   más afectados infancia/adolescencia/adultez de cada problematica?
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/10.1_homicidios.png)
 Cabe resaltar que el presente gráfico presenta el número de infantes colombianos afectados cómo víctimas de homicidio en Colombia por sus distintos departamentos que lo conforman. Por un lado, tenemos el departamento del Amazonas que es el que más destaca entre todos con más de 10000 víctimas, seguido de departamentos cómo lo serían Cesar, Córdoba, Magdalena, Santander y Valle del Cauca cómo los otros departamentos donde los infantes han sido bastante afectados fuertemente por el conflicto armado, ya sea por las disputas territoriales, narcotráfico y fenómenos de violencia urbana. En estas regiones, la infancia ha sido víctima tanto de enfrentamientos directos como de asesinatos selectivos y colateralidad de acciones armadas.
 Por otro lado, departamentos como Vaupés, Guainía, Vichada, San Andrés ,Guaviare y Quindío muestran cifras significativamente más bajas. Estas zonas, aunque afectadas también por el conflicto, tienen menor densidad poblacional y, en algunos casos, limitada cobertura institucional, lo que puede incidir tanto en la menor ocurrencia como en una posible registración de casos.
@@ -485,7 +485,7 @@ La magnitud del reclutamiento forzado en la adultez pone de manifiesto una prác
 
 La persistencia de estas prácticas —ya sea como estrategia de guerra, represión social o control territorial, exige una respuesta contundente del Estado colombiano, que no sólo castigue a los responsables, sino que también garantice condiciones dignas de vida, mecanismos eficaces de protección, verdad y reparación para las víctimas, y acciones estructurales que desactiven las causas profundas de la violencia
 
-### 11.¿La distribución de las edades esta sesgada mas a la parte de Infacncia o adultos?
+### 11\.¿La distribución de las edades esta sesgada mas a la parte de Infacncia o adultos?
 
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/11_secuestros.png)
 La siguiente gráfica demuestra la distribución de las distintas edades afectadas por la problemática de secuestro en Colombia, a través de un histograma con una curva densidad suavizada en rojo. Este análisis nos permite identificar los rangos más afectados por esta situación que violan los derechos humanos, y ofrece pistas sobre los perfiles poblacionales más vulnerables a esta práctica durante el conflicto armado.        	
@@ -513,7 +513,7 @@ En conjunto, esta distribución etaria pone de manifiesto el uso del homicidio n
 En primer lugar, se observa que los jóvenes adultos (aproximadamente entre los 20 y 35 años) fueron el grupo  más golpeado en la mayoría de las formas de violencia analizadas. Tanto en los casos de secuestro como de homicidio y desaparición forzada, este segmento de la población aparece como el de mayor densidad. Esto se debe a que se trata de una etapa de la vida asociada con la productividad, la movilidad, el liderazgo y la participación comunitaria o política, lo que los convierte en objetivos estratégicos para fines de control territorial, eliminación de liderazgos, extorsión o castigo.
 Por otro lado, la gráfica del reclutamiento forzado evidencia una realidad aún más cruda: niños, niñas y adolescentes, especialmente entre los 14 y 18 años, fueron las principales víctimas de esta práctica. Este patrón muestra el uso deliberado de menores por parte de grupos armados ilegales, quienes aprovecharon su vulnerabilidad, desprotección institucional y falta de oportunidades para incorporarlos a sus filas.
 
-### 12.Si conviertes edad categoría a numérica, ¿cuál es la edad promedio de las víctimas?
+### 12\.Si conviertes edad categoría a numérica, ¿cuál es la edad promedio de las víctimas?
 - a. en promedio, que edades han sido afectadas
 - b. varianza y desviacion estandar
 - c. Aplicando los cuartiles, ¿que podemos deducir?
