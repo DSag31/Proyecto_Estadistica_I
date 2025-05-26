@@ -137,7 +137,33 @@ Reclutamientos
 - Las regiones más apartadas —Vaupés, Guaviare, Guainía— aparecen con mínimos registros, congruente con su aislamiento geográfico y con comunidades que, por su estructura comunitaria tradicional, implican mayores costos operativos para secuestradores.
 
 
+### 5\. De que edad a que edad han estado las personas mas afectadas (mayor frecuencia absoluta del intervalo)
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/5_Desapariciones.png)
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/5_homicidios.png)
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/5_reclutamiento.png)
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/5_secuestros.png)
 
+### 6\. ¿Que tipo de etnias existen y cuales han sido las más afectadas?
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/6.1_Desapariciones.png)
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/6.2_Desapariciones.png)
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/6.1_homicidios.png)
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/6.2_homicidios.png)
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/2_reclutamiento.png)
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/6.1_secuestros.png)
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/6.2_secuestros.png)
+
+
+### 7\. ¿Qué guerrilla es la que está afectando más a los ciudadanos?
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/7_Desapariciones.png)
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/7_homicidios.png)
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/7_reclutamiento.png)
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/7_secuestros.png)
+
+### 8\. En un promedio general, ¿Qué se ven mas afectados los hombres o las mujeres?
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/8_Desapariciones.png)
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/8_homicidios.png)
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/8_reclutamiento.png)
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/8_secuestros.png)
 ### 9.¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos )
 ### 10.¿En cuales departamentos se vieron   más afectados infancia/adolescencia//adultez de cada problematica?
 ### 11.¿La distribución de las edades esta sesgada mas a la parte de Infacncia o adultos?
