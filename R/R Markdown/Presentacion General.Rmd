@@ -137,33 +137,116 @@ Reclutamientos
 - Las regiones más apartadas —Vaupés, Guaviare, Guainía— aparecen con mínimos registros, congruente con su aislamiento geográfico y con comunidades que, por su estructura comunitaria tradicional, implican mayores costos operativos para secuestradores.
 
 
-### 5\. De que edad a que edad han estado las personas mas afectadas (mayor frecuencia absoluta del intervalo)
-![Desapariciones](C:/Datos_limpios/ImagenesProblematica/5_Desapariciones.png)
+### 5\. De que edad a que edad han estado las personas mas afectadas (mayor frecuencia absoluta del intervalo)  
+  Primero, las definiciones que me das son clave:
+
+* **Infancia:** 0 a 14 años  
+* **Adolescencia:** 15 a 19 años  
+* **Adultez:** 20 años en adelante
+
+Analicemos cada gráfico:
+  
+    
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/5_Desapariciones.png)  
+  
+    
+  1. **Frecuencia de Desapariciones por categoría de edad:**  
+   * **Descripción:** La mayor frecuencia de desapariciones se concentra en el rango de edad de **15-19 años** (adolescencia), con un número que supera las 25,000 desapariciones (aproximadamente 27,000-28,000). Le siguen de cerca los rangos de 20-24 años y 25-29 años (adultez temprana), ambos con más de 20,000 casos. Es notable también la cantidad de desapariciones en el grupo de 0-4 años (infancia), que es más alta que varios grupos de adultos mayores. A partir de los 30-34 años, la frecuencia tiende a disminuir progresivamente con la edad.  
+   * **Grupo más afectado:** Adolescentes (15-19 años).  
+     
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/5_homicidios.png)
+2. **Frecuencia de homicidios por categoría de edad:**  
+   * **Descripción:** El pico más alto de homicidios se da en el rango de **20-24 años** (adultez temprana), con una cifra muy elevada, cercana a los 95,000 casos. El segundo grupo más afectado es el de 25-29 años (adultez), con aproximadamente 87,000 casos, seguido por el de 30-34 años (adultez) con alrededor de 70,000, y luego el de 15-19 años (adolescencia) con más de 60,000 casos. Al igual que con las desapariciones, el grupo de 0-4 años (infancia) presenta una cantidad significativa de homicidios, superando a varios grupos de adultos mayores. La tendencia general es una disminución de la frecuencia a medida que aumenta la edad, después del pico en la adultez temprana.  
+   * **Grupo más afectado:** Adultos jóvenes (20-24 años).  
+     
 ![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/5_reclutamiento.png)
+3. **Frecuencia de reclutamientos por categoría de edad:**  
+   * **Descripción:** Este gráfico muestra una concentración abrumadora de reclutamientos en los grupos más jóvenes. El rango de edad más afectado es el de **15-19 años** (adolescencia), con más de 10,000 casos. El segundo grupo con mayor frecuencia es el de 10-14 años (infancia), con más de 6,000 casos. También se observa un número preocupante de reclutamientos en el rango de 0-4 años (infancia), aunque menor en comparación con los dos anteriores. A partir de los 20 años, la cantidad de reclutamientos disminuye drásticamente, siendo casi insignificante en los grupos de mayor edad.  
+   * **Grupo más afectado:** Adolescentes (15-19 años), seguido muy de cerca en vulnerabilidad por niños y niñas de 10-14 años.  
+     
+   
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/5_secuestros.png)
+4. **Frecuencia de secuestro por categoría de edad:**  
+   * **Descripción:** La frecuencia de secuestros es más alta en la adultez. El rango de **30-34 años** (adultez) presenta la mayor cantidad, con casi 6,000 casos. Sin embargo, los rangos de 25-29 años, 95+ años (este último es un agregado y podría estar influenciado por cómo se agrupan los datos de edades muy avanzadas o menos especificadas), y 35-39 años muestran frecuencias muy similares, todas superando los 5,500 casos. Los rangos de 20-24 y 40-44 años también son significativos. Nuevamente, el grupo de 0-4 años (infancia) muestra una cantidad considerable de secuestros. La tendencia general es una disminución a partir de los 45-49 años, aunque con algunas fluctuaciones.  
+   * **Grupo más afectado:** Adultos (principalmente entre 25 y 39 años, con el pico en 30-34 años).
+
 
 ### 6\. ¿Que tipo de etnias existen y cuales han sido las más afectadas?
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/6.1_Desapariciones.png)
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/6.2_Desapariciones.png)
+**Número de desapariciones por grupo étnico:**  
+Este gráfico muestra que el grupo étnico mestizo concentra la abrumadora mayoría de las víctimas de desaparición, con un 87.579% del total, lo que representa aproximadamente 150,000 casos. Le sigue el grupo NARP (Negro, Afrocolombiano, Raizal y Palenquero) con un 10.026%. El grupo indígena representa el 2.325% de las víctimas, mientras que el grupo ROM (Gitano) es el menos afectado, con solo el 0.070%. La disparidad es muy marcada.
+
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/6.1_homicidios.png)
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/6.2_homicidios.png)
-![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/2_reclutamiento.png)
+**Número de homicidios por grupo étnico:**  
+En cuanto a los homicidios, el grupo mestizo nuevamente es el más afectado, acumulando el 85.584% de los casos, superando las 450,000 víctimas. El grupo NARP es el segundo más impactado, con el 11.888% de los homicidios. La población indígena representa el 2.486% de las víctimas. El grupo ROM es el que presenta la menor incidencia, con un 0.043%, reflejando un patrón similar al de las desapariciones.
+
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/6.1_reclutamiento.png)
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/6.2_reclutamiento.png)
+**Número de reclutamientos por grupo étnico:**  
+Para el delito de reclutamiento, el grupo mestizo sigue siendo el que presenta el mayor número absoluto de víctimas, con un 76.854% (cerca de 15,000 casos). Sin embargo, es notable que el grupo indígena es el segundo más afectado en esta categoría, con un 12.566%, seguido de cerca por el grupo NARP con un 10.533%. El grupo ROM es el menos afectado, con un 0.047%. La proporción de víctimas indígenas es significativamente mayor aquí.
+
+
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/6.1_secuestros.png)
+
+
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/6.2_secuestros.png)
+  **Número de secuestros por grupo étnico:**  
+El gráfico de secuestros indica que la población mestiza es predominantemente la más afectada, con un 87.393% de los casos, lo que se traduce en cerca de 50,000 víctimas. El grupo NARP es el segundo más afectado, con un 6.436% de los secuestros. El grupo indígena representa el 6.128%, una cifra muy cercana a la del grupo NARP. Nuevamente, el grupo ROM es el que registra el menor porcentaje, con un 0.043%.
+
+   
+**En general:**   
+Considerando los cuatro tipos de delitos, el grupo étnico mestizo es consistentemente el más afectado en términos de números absolutos, representando más del 75% de las víctimas en cada categoría. El grupo NARP se posiciona generalmente como el segundo más afectado, seguido por el grupo indígena. Sin embargo, es crucial notar que para el delito de reclutamiento, la población indígena muestra una proporción de victimización significativamente más alta en comparación con otros delitos, lo que sugiere una vulnerabilidad particular. El grupo ROM es el menos afectado en todas las categorías de violencia analizadas.
 
 
 ### 7\. ¿Qué guerrilla es la que está afectando más a los ciudadanos?
-![Desapariciones](C:/Datos_limpios/ImagenesProblematica/7_Desapariciones.png)
-![Homicidios](C:/Datos_limpios/ImagenesProblematica/7_homicidios.png)
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/7_Desapariciones.png)  
+  **Guerrillas que más afectan a los ciudadanos (Desapariciones):**  
+Este gráfico indica que los Paramilitares (PARA) son el actor armado con la mayor atribución de desapariciones, superando los 90,000 casos. La guerrilla GUE-FARC le sigue como el segundo actor más significativo, con aproximadamente 47,000 casos. La categoría "multiple" (múltiples actores) también representa un número considerable de víctimas, seguida por los Agentes del Estado (EST). Otras guerrillas como GUE-ELN y GUE-OTRO tienen una participación mucho menor en este delito.
+
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/7_homicidios.png)  
+  
+  **Guerrillas que más afectan a los ciudadanos (homicidios):**  
+En el caso de los homicidios, los Paramilitares (PARA) nuevamente figuran como el principal responsable, con una cifra que supera los 220,000 casos. La guerrilla GUE-FARC es el segundo actor con mayor número de atribuciones, cercana a los 140,000. La categoría "OTRO" presenta un volumen significativo de casos, seguida por "multiple" y Agentes del Estado (EST). Las guerrillas GUE-ELN y GUE-OTRO tienen un impacto comparativamente menor en este tipo de violencia.
+
 ![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/7_reclutamiento.png)
-![Secuestros](C:/Datos_limpios/ImagenesProblematica/7_secuestros.png)
+  
+    
+**Guerrillas que más afectan a los ciudadanos (reclutamiento):**  
+El gráfico de reclutamiento muestra un panorama distinto: la guerrilla GUE-FARC es el actor predominante, con una atribución que supera los 13,000 casos, muy por encima de los demás. Los Paramilitares (PARA) son el segundo actor, con alrededor de 2,500 casos, seguidos por la guerrilla GUE-ELN. Las categorías "multiple", "OTRO", "GUE-OTRO" y Agentes del Estado (EST) registran cifras considerablemente menores en este tipo de delito, donde GUE-FARC tiene la mayor responsabilidad.
+
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/7_secuestros.png)  
+  **Guerrillas que más afectan a los ciudadanos (secuestros):**  
+Para los secuestros, la guerrilla GUE-FARC es el actor armado con la mayor cantidad de casos atribuidos, superando las 22,000 víctimas. Los Paramilitares (PARA) se sitúan como el segundo responsable, con aproximadamente 11,000 casos. La categoría "OTRO" y la guerrilla GUE-ELN también muestran una participación significativa en este delito, con cifras importantes. Las demás categorías como "multiple", "GUE-OTRO" y Agentes del Estado (EST) tienen un menor número de atribuciones.
+
+  
+  **En general:**  
+En conjunto, estos gráficos revelan que los Paramilitares (PARA) son el principal actor responsable de desapariciones y homicidios, los delitos con mayor número de víctimas totales. Sin embargo, la guerrilla GUE-FARC es la que predomina en reclutamientos y secuestros, y se posiciona como el segundo actor más relevante en desapariciones y homicidios, lo que la convierte en la guerrilla con mayor impacto global acumulado en estas cuatro formas de violencia. La guerrilla GUE-ELN tiene una participación menor pero constante. La presencia de Agentes del Estado (EST) y las categorías "multiple" y "OTRO" subrayan la complejidad de la atribución de responsabilidades en el conflicto.
+
 
 ### 8\. En un promedio general, ¿Qué se ven mas afectados los hombres o las mujeres?
-![Desapariciones](C:/Datos_limpios/ImagenesProblematica/8_Desapariciones.png)
-![Homicidios](C:/Datos_limpios/ImagenesProblematica/8_homicidios.png)
-![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/8_reclutamiento.png)
-![Secuestros](C:/Datos_limpios/ImagenesProblematica/8_secuestros.png)
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/8_Desapariciones.png)  
+  **Proporción de desapariciones por sexo:**  
+Este gráfico de pastel muestra que los hombres representan la mayoría de las víctimas de desaparición, con un 75.3% del total. Las mujeres constituyen el 24.7% restante, lo que indica que aproximadamente tres de cada cuatro víctimas de desaparición son hombres. Esta diferencia subraya una mayor vulnerabilidad masculina a este tipo de violencia en el contexto analizado. La proporción es significativamente desigual.
+
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/8_homicidios.png)  
+  **Proporción de homicidios por sexo:**  
+La gráfica de homicidios revela una disparidad aún más marcada. Los hombres representan un abrumador 90.9% de las víctimas, mientras que las mujeres constituyen el 9.1%. Esto significa que más de nueve de cada diez víctimas de homicidio son hombres. Esta es la diferencia más extrema entre los sexos de todos los delitos analizados, evidenciando un impacto desproporcionadamente alto sobre la población masculina en términos de violencia letal.
+
+
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/8_reclutamiento.png)  
+  **Proporción de reclutamientos por sexo:**  
+En el caso de los reclutamientos, los hombres siguen siendo la mayoría de las víctimas con un 68.2%. Sin embargo, la proporción de mujeres víctimas es notablemente más alta en comparación con otros delitos, alcanzando el 31.8%. Esto indica que casi un tercio de las personas reclutadas son mujeres, lo que sugiere una vulnerabilidad particular de este grupo al reclutamiento forzado por parte de los actores armados, a pesar de que los hombres sigan siendo los más afectados.
+
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/8_secuestros.png)  
+  
+  **Proporción de secuestros por sexo:**  
+Para el delito de secuestro, los hombres constituyen el 77.1% de las víctimas, mientras que las mujeres representan el 22.9%. Al igual que con las desapariciones, esto muestra que más de tres cuartas partes de las víctimas de secuestro son hombres. La proporción es considerablemente desigual, aunque la diferencia no es tan extrema como en los homicidios. Los hombres, por tanto, han sido el objetivo principal de este delito.
+
+
+**En general:**  
+Los cuatro gráficos de pastel indican consistentemente que los hombres han sido las víctimas predominantes en todas las formas de violencia analizadas: desapariciones, homicidios, reclutamientos y secuestros. La mayor disparidad se observa en los homicidios, donde más del 90% de las víctimas son hombres. Aunque los hombres son mayoría, es importante destacar que las mujeres también son víctimas en proporciones significativas, especialmente en reclutamientos, donde representan casi un tercio del total. Esto evidencia un impacto diferenciado del conflicto armado según el sexo, con una mayor afectación directa sobre la población masculina.
 ### 9.¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos)
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/9_Desapariciones.png)
 En el presente diagrama de calor se puede observar la representación del número de desapariciones ocurridas entre 1985 y 2018 en el contexto del conflicto armado en Colombia, específicamente relacionado con la problemática de las desapariciones forzadas perpetradas por distintos grupos armados ilegales y, en algunos casos, por agentes del Estado.
