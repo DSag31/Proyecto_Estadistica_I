@@ -19,9 +19,57 @@ output:
 ---
 
 # INTRODUCCION
+El conflicto armado en Colombia ha dejado profundas cicatrices en la sociedad, reflejadas en miles de casos de homicidios, desapariciones forzadas, secuestros y reclutamiento forzado, que han afectado principalmente a la población civil. Para entender la magnitud y las características de estos fenómenos, es crucial contar con fuentes de datos confiables que permitan un análisis riguroso y contextualizado.
+
+En este proyecto se emplea la base de datos disponible en el portal oficial del Departamento Administrativo Nacional de Estadística (DANE), específicamente la recopilada en el marco del “Censo de Homicidios y Hechos Victimizantes”, accesible a través del sitio [https://microdatos.dane.gov.co/index.php/catalog/795](https://microdatos.dane.gov.co/index.php/catalog/795). Esta documentación ofrece un registro detallado de hechos relacionados con el conflicto armado colombiano, clasificando los eventos según su naturaleza (homicidio, secuestro, reclutamiento, desaparición), características sociodemográficas de las víctimas y localización geográfica.
+
+Con base en este material, surge la siguiente pregunta de investigación:  
+ **¿Cómo se ha manifestado el conflicto armado en Colombia a través de sus formas más crudas de violencia: homicidios, desapariciones, secuestros y reclutamientos?**
+
+ Esta cuestión guía el análisis propuesto, orientando la exploración hacia los tipos de victimización más representativos del conflicto y permitiendo evaluar su impacto desde diferentes dimensiones.
+
+El presente informe tiene como propósito explorar estos datos desde un enfoque estadístico y visual, con el fin de identificar patrones, tendencias y comportamientos que permitan una mejor comprensión de los efectos del conflicto armado sobre la población. Esta aproximación no solo busca revelar cifras, sino también aportar elementos que contribuyan a una memoria colectiva y a la construcción de paz a partir del análisis de la evidencia.
+
 # METODOLOGIA
-# RESULTADOS
-# DISCUSIÓN
+Para llevar a cabo el estudio estadístico sobre el conflicto armado en Colombia, se desarrollaron una serie de pasos metodológicos estructurados que permitieron organizar, limpiar y analizar los datos de manera eficiente. El proceso fue realizado en equipo, asegurando una distribución colaborativa de tareas y una revisión cruzada constante para garantizar la calidad del trabajo. A continuación, se describen los pasos seguidos:
+
+1. Se inició el proceso con la navegación y exploración del sitio web oficial del DANE, específicamente el repositorio correspondiente a la "Encuesta sobre violencias y conflictos en Colombia" ([https://microdatos.dane.gov.co/index.php/catalog/795](https://microdatos.dane.gov.co/index.php/catalog/795)). Allí se revisaron en detalle todos los documentos asociados a la base de datos, incluyendo los metadatos y diccionarios de variables.
+
+2. Posteriormente, se identificaron las bases de datos más recientes y completas disponibles en el portal, priorizando aquellas que contenían información relevante sobre las principales problemáticas del conflicto: homicidios, desapariciones, reclutamientos y secuestros.
+
+3. Se evaluaron los diferentes formatos disponibles (.csv y .parquet) para seleccionar el que facilitara un mejor manejo de los datos. Se optó por trabajar con archivos .parquet, ya que permiten una mayor eficiencia en el procesamiento de grandes volúmenes de información.
+
+4. Con el fin de facilitar el trabajo en equipo, se creó un repositorio colaborativo en GitHub ([https://github.com/Sharktakop/Proyecto\_Estadistica\_I.git](https://github.com/Sharktakop/Proyecto_Estadistica_I.git)). Este repositorio permite organizar los scripts, versiones del proyecto y coordinar las contribuciones de cada integrante del grupo.
+
+5. Se llevó a cabo un proceso exhaustivo de limpieza de datos. Esto incluyó la depuración de columnas irrelevantes, el reordenamiento de variables clave, y la estandarización de formatos. Las columnas que no aportan valor al análisis fueron eliminadas.
+
+6. Los archivos resultantes del proceso de limpieza fueron almacenados en una carpeta central denominada "Datos\_limpios", la cual contiene los archivos .parquet ya preparados para su análisis, correspondientes a cada tipo de delito: homicidios, desapariciones, reclutamientos y secuestros.
+
+7. Se formularon preguntas base orientadas a la investigación, guiadas por la pregunta de investigación. Estas preguntas sirvieron como eje para dirigir el análisis y establecer los focos de interés estadístico.
+
+8. Se desarrollaron scripts en RStudio para procesar la información. Esto incluyó el uso de librerías como `dplyr`, `ggplot2`, y `arrow`, entre otras, para realizar limpieza adicional, visualización de datos y cálculo de parámetros estadísticos fundamentales.
+
+9. Una vez obtenidas las visualizaciones gráficas, se realizó un análisis detallado por cada problemática. Se interpretaron las tendencias y patrones observados, con el fin de identificar los grupos más afectados y los actores involucrados en cada tipo de delito.
+
+10. Finalmente, se integró una visión general a partir de los análisis individuales, lo cual permitió responder de manera argumentada la pregunta de investigación, destacando los hallazgos más relevantes sobre las dinámicas del conflicto armado en Colombia.  
+      
+# DISCUCION Y DERESULTADOS
+### 1.Análisis del número de afectados entre los años 1985 a 2018 (homicidios, secuestros, desapariciones y reclutamiento).
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/1_desapariciones.png)
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/1_homicidios.png)
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/1_reclutamiento.png)
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/1_secuestros.png)
+En la gráfica que muestra los homicidios desde 1985 hasta 2018, se puede evidenciar una tendencia a lo largo del tiempo que aumentó gradualmente hasta el año 2003 donde fue el año número con el mayor de víctimas de homicidio y empezó un periodo con una mayor incidencia que solo hasta el 2012 empezó a disminuir, también se puede evidenciar que el menor número de víctimas se observa a mediados de la década de 1980 con menos de 10.000 víctimas al año.
+
+La gráfica de desapariciones (1985-2018) muestra un aumento gradual desde la década de 1980, con un pico en 2002 (con casi 10,000 víctimas). Entre 1985 y mediados de los 90, los valores oscilaron entre 1,000 y 2,500 víctimas, creciendo notablemente desde 1995\. De 2003 a 2010, se mantuvo alta incidencia (7,500-10,000 víctimas), disminuyendo desde 2010 hasta estabilizarse en 5,000-7,500 hacia 2015-2016. El mínimo se observa en los 80, con cerca de 1,000 víctimas anuales.
+
+La gráfica de secuestros refleja un aumento gradual desde los 80, con un pico entre 2000 y 2003 (superando incluso las 6,000 víctimas). En los principios de los 90, los valores fueron muy bajos (menos de 1,000 víctimas), creciendo desde mediados de los 90\. De 2000 a 2005, se mantuvo alta incidencia (4000-6000 víctimas), disminuyendo desde 2006 a menos de 2000 víctimas hacia 2015-2018.
+
+La gráfica de reclutamiento muestra un aumento gradual desde finales de los 80, con un pico en 2001 (cerca de 1,600 víctimas). En los principios de los 90, los valores fueron bajos (menos de 200 víctimas), con un máximo intermedio en 1996 (500 víctimas). De 1998 a 2004, se mantuvo alta incidencia, disminuyendo desde 2006 y estabilizándose en 200-400 víctimas hacia 2015-2018.
+
+El periodo entre finales de los años 90 y mediados de los 2000 fue el más crítico en términos de violencia generalizada en Colombia, reflejado en el aumento simultáneo de homicidios, desapariciones, secuestros y reclutamientos. A partir de 2006-2010, se observa una disminución y estabilización en la mayoría de estas formas de violencia, lo que sugiere un cambio significativo en el contexto del conflicto armado y la seguridad pública del país.
+
+
 # CONCLUSIÓN 
 # REFERENCIAS
  
