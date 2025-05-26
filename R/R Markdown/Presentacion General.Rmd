@@ -374,7 +374,7 @@ Para el delito de secuestro, los hombres constituyen el 77.1% de las víctimas, 
 Los cuatro gráficos de pastel indican consistentemente que los hombres han sido las víctimas predominantes en todas las formas de violencia analizadas: desapariciones, homicidios, reclutamientos y secuestros. La mayor disparidad se observa en los homicidios, donde más del 90% de las víctimas son hombres. Aunque los hombres son mayoría, es importante destacar que las mujeres también son víctimas en proporciones significativas, especialmente en reclutamientos, donde representan casi un tercio del total. Esto evidencia un impacto diferenciado del conflicto armado según el sexo, con una mayor afectación directa sobre la población masculina.
 
 
-### 9.¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos)
+### 9\. ¿Existen meses del año con picos recurrentes de víctimas? (osea hacer el analisis de los meses desde el 85 al 2018 donde se han presentado mas delitos (los meses mas movidos)
 
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/9_Desapariciones.png)
 En el presente diagrama de calor se puede observar la representación del número de desapariciones ocurridas entre 1985 y 2018 en el contexto del conflicto armado en Colombia, específicamente relacionado con la problemática de las desapariciones forzadas perpetradas por distintos grupos armados ilegales y, en algunos casos, por agentes del Estado.
