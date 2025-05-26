@@ -198,6 +198,64 @@ Reclutamientos
 
 
 
+### 4\. Diagrama de barras: Top municipios afectados
+
+
+![Homicidios](C:/Datos_limpios/ImagenesProblematica/4_homicidios.png)
+
+
+
+- Municipios más afectados: Medellín (≈48 000), Cali (≈31 000), Bogotá D.C. (≈27 000), Cúcuta (≈10 000) y Barranquilla (≈8 000).
+
+
+- Economías ilegales y crimen organizado: Medellín y Cali —centros históricos de narcotráfico— aún reflejan con creces su legado violento.
+
+- Ciudades portuarias y fronterizas: Barranquilla y Cúcuta muestran menor cifra absoluta que las metrópolis principales, pero siguen siendo focos importantes por contrabando y extorsión.
+
+
+
+
+
+![Secuestros](C:/Datos_limpios/ImagenesProblematica/4_secuestros.png)
+
+
+- Municipios más afectados: Bogotá D.C. (≈1 600), Medellín (≈1 100), Cali (≈1 050), Argelia (Antioquia, ≈980) y Valledupar (Cesar, ≈870).
+
+
+- Diversificación del delito: Aunque la ciudad concentra secuestros de alto perfil (rescate económico o político), municipios rurales como Argelia y Valledupar evidencian secuestros campesinos o contra líderes sociales.
+
+- Control territorial: Zona del Catatumbo (Cesar) y el suroeste antioqueño son históricamente disputados, lo que explica la aparición de Valledupar y Argelia.
+
+
+
+
+
+![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/4_reclutamiento.png)
+
+
+- Municipios más afectados: Vista Hermosa (Meta, ≈620), San José del Guaviare (Guaviare, ≈540), Medellín (≈350), “NA” (otros, ≈900).
+
+
+- Zonas de conflicto activo: Meta y Guaviare son corredores de grupos armados con escasa presencia estatal, terreno propicio para el reclutamiento de menores y campesinos.
+
+- Ciudades como fuente de “reserva”: El hecho de que Medellín aparezca en tercera posición muestra cómo incluso en ciudades grandes hay captación de jóvenes vulnerables, pero en menor escala que en el campo.
+
+
+
+
+
+![Desapariciones](C:/Datos_limpios/ImagenesProblematica/4_desapariciones.png)
+
+
+- Municipios más afectados: Bogotá D.C. (≈32 000), Medellín (≈9 500), Cali (≈6 300), Villavicencio (≈2 800) y Cúcuta (≈2 700).
+
+
+- Concentración urbana: Las capitales muestran altísimos números, lo que sugiere desde un alto volumen de denuncias en zonas pobladas hasta la presencia de redes de trata o desaparición forzada vinculadas a estructuras criminales.
+
+- Fronteras y corredores: Cúcuta y Villavicencio, ciudades paso, aparecen en el top-5, indicando su vulnerabilidad a desplazamientos forzados y rutas de paso de grupos armados.
+
+
+
 
 
 
