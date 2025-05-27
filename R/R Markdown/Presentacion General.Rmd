@@ -721,7 +721,7 @@ En conjunto, estos gráficos revelan que los Paramilitares (PARA) son el princip
 
 ### 8\. En un promedio general, ¿Qué se ven mas afectados los hombres o las mujeres?
 
-En el siguiente código se presenta la manera que se manejaron los datos para filtrarlos y crear sus respectivos diagramas de pastel que muestran  quien ha sido más afectado por los distintos delitos , loss hombres o las mujeres(aplica para todos los delitos):
+En el siguiente código se presenta la manera que se manejaron los datos para filtrarlos y crear sus respectivos diagramas de pastel que muestran  quien ha sido más afectado por los distintos delitos , los hombres o las mujeres(aplica para todos los delitos):
 
 ```{r afectados_genero,  eval=FALSE, tidy=TRUE}
 
