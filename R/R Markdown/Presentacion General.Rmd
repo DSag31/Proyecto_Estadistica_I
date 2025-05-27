@@ -419,7 +419,9 @@ Reclutamientos
 
 ### 4\. Diagrama de barras: Top municipios afectados
 
+
 En el siguiente código se presenta la manera que se manejaron los datos para filtrarlos y crear sus respectivos diagramas de barras que hace la comparativa de los municipios más afectados por la problematica(aplica para todos los delitos):
+
 
 ```{r municipios_afectados_top,  eval=FALSE, tidy=TRUE}
 
