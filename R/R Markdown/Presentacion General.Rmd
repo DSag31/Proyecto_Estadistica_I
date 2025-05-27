@@ -66,6 +66,34 @@ Para llevar a cabo el estudio estadístico sobre el conflicto armado en Colombia
 10. Finalmente, se integró una visión general a partir de los análisis individuales, lo cual permitió responder de manera argumentada la pregunta de investigación, destacando los hallazgos más relevantes sobre las dinámicas del conflicto armado en Colombia.  
       
 # DISCUCION Y DERESULTADOS
+Hay que tener en cuenta un aspecto muy importante para los distintos análisis que se realizarán en el presente informe, y son dos cosas muy importantes.
+
+Por un lado es necesario descargar las librerías necesarias para compilar cada código:
+```{r instalar-cargar-librerias, eval=FALSE, tidy=TRUE}
+# Instalar librerías si hace falta
+install.packages(c("arrow","dplyr","ggplot2","readr","sf", "tidyr", "RColorBrewer","kableExtra","scales","knitr","lubridate","viridis","stringr"))
+# Cargar librerías importantes
+library(arrow)
+library(dplyr) 
+library(ggplot2) 
+library(readr)
+library(sf) 
+library(tidyr)    
+library(RColorBrewer)  
+library(kableExtra)
+library(scales)
+library(viridis)
+library(knitr)
+library(lubridate)
+library(stringr)
+```
+Ahora, es necesario que de acuerdo al dataset que se vaya a utilizar, hay que cargarlo al sistema de la siguiente manera:
+
+```{r leer-parquet, eval=FALSE, tidy=TRUE}
+# Leer archivo Parquet
+datos <- read_parquet("C:/Datos_limpios/datosLimpios-homicidio-R100.parquet")
+```
+
 ### 1.Análisis del número de afectados entre los años 1985 a 2018 (homicidios, secuestros, desapariciones y reclutamiento).
 
 
