@@ -1,7 +1,7 @@
 ---
 title: "Presentación General"
 author: 
-  - "Yerson Guillermo Antolinez Peña"
+  - "Yerson Guillermo Antolinez Peña (2225611)"
   - "David Steven Anaya González (2211714)"
   - "Sebastián Laguna funes (2211911)"
 date: "2025-05-14"
