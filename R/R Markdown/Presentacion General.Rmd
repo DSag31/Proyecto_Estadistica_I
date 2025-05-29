@@ -1465,7 +1465,9 @@ En síntesis, el conflicto armado colombiano no solo dejó una profunda huella c
 # REFERENCIAS
 - https://microdatos.dane.gov.co/index.php/catalog/795
 - https://gadm.org/download_country.html
- 
+- https://www.youtube.com/watch?v=6Qj8yBFgT9Q&pp=ygUKciBtYXJrZG93bg%3D%3D
+- https://www.youtube.com/watch?v=wc9lKDStnmE&list=LL&index=2&t=3s
+
 # Anexo
 - https://github.com/DSag31/Proyecto_Estadistica_I.git
 
