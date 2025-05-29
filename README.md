@@ -14,3 +14,6 @@ En esta capeta se encuentran 3 subcarpetas:
 - Codigos_R_Problematica: Esta carpeta contiene los codigo R funcionales para que muestren graficas y resultados, archivos que se van a tratar en la problematica como lo son Desapariciones, Homicidios, Reclutamiento y secuestros
 - R Markdown: Esta capeta contiene los archivos para mostrar un informe en tipo .html, un informe bien estructurado y visual donde se muestran los datos
 - R para modificar el parquet: Una carpeta no tan importante, pero escencial para modificar los datos originales, es decir los que estaban en la capeta Victimas_Conflicto_Armado_Datos
+
+#### Archivo Comandos R markdown.txt
+Este archivo contiene los comandos necesarios para poder ejecutar el R markdown 
