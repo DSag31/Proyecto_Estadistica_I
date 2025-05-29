@@ -1,5 +1,5 @@
 ---
-title: "Presentación General"
+title: "Informe Víctimas del Conflicto Armado en Colombia"
 author: 
   - "Yerson Guillermo Antolinez Peña (2225611)"
   - "David Steven Anaya González (2211714)"
