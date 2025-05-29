@@ -2,7 +2,7 @@
 title: "Presentación General"
 author: 
   - "Yerson Guillermo Antolinez Peña"
-  - "David Steven Anaya González"
+  - "David Steven Anaya González (2211714)"
   - "Sebastián Laguna funes (2211911)"
 date: "2025-05-14"
 output: 
