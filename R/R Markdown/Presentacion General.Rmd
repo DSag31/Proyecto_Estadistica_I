@@ -65,14 +65,14 @@ Para llevar a cabo el estudio estadístico sobre el conflicto armado en Colombia
 
 10. Finalmente, se integró una visión general a partir de los análisis individuales, lo cual permitió responder de manera argumentada la pregunta de investigación, destacando los hallazgos más relevantes sobre las dinámicas del conflicto armado en Colombia.  
       
-# DISCUCION Y DERESULTADOS
+# DISCUSIÓN Y RESULTADOS
 Hay que tener en cuenta un aspecto muy importante para los distintos análisis que se realizarán en el presente informe, y son dos cosas muy importantes.
 
 Por un lado es necesario descargar las librerías necesarias para compilar cada código:
 ```{r instalar-cargar-librerias, eval=FALSE, tidy=TRUE}
 # Instalar librerías si hace falta
 install.packages(c("arrow","dplyr","ggplot2","readr","sf", "tidyr", "RColorBrewer","kableExtra","scales","knitr","lubridate","viridis","stringr"))
-# Cargar librerías importantes
+# Cargar librerías importantes  
 library(arrow)
 library(dplyr) 
 library(ggplot2) 
@@ -87,6 +87,20 @@ library(knitr)
 library(lubridate)
 library(stringr)
 ```
+Explicación:
+- Dplyr: Herramientas para manipular datos de forma eficiente y legible con verbos como filter(), select(), mutate(), summarize() y group_by().
+- Tidyr: Complementario a dplyr, se enfoca en dar forma (reshape) a los datos: funciones como pivot_longer() y pivot_wider().
+- Readr: Lectura rápida de archivos de texto/csv/tab: funciones como read_csv(), read_delim(), etc.
+- Stringr: Facilita la manipulación de cadenas de texto con funciones coherentes como str_detect(), str_replace(), str_sub(), etc.
+- Lubridate: Facilita el manejo de fechas y tiempos, con funciones como ymd(), today(), hour(), floor_date().
+- sf (Simple Features): Manejo de datos espaciales (vectoriales) de forma moderna y compatible con ggplot2.
+- Arrow: Lectura y escritura eficiente de datos en formato Apache Arrow y Parquet. Útil para trabajar con big data.
+- ggplot2: Sistema de gráficos elegante y potente basado en la gramática de los gráficos (Grammar of Graphics).
+- Scales: Complementa ggplot2 proporcionando escalas y funciones para formatear etiquetas (ej. label_percent(), rescale()).
+- RColorBrewer: Paletas de colores perceptualmente coherentes y agradables para mapas y gráficos.
+- Viridis: Paletas de colores accesibles (para personas con daltonismo) y bien diseñadas, también para ggplot2.
+- kableExtra: Mejora la salida de knitr::kable() para crear tablas bonitas en HTML o PDF (uso común en R Markdown).
+- Knitr: Motor de generación de reportes dinámicos (por ejemplo, R Markdown). Convierte R + Markdown a HTML, PDF, Word, etc.
 Ahora, es necesario que de acuerdo al dataset que se vaya a utilizar, hay que cargarlo al sistema de la siguiente manera:
 
 ```{r leer-parquet, eval=FALSE, tidy=TRUE}
