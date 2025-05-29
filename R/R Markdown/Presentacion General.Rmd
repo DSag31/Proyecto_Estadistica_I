@@ -1195,7 +1195,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
 - d. y su sesgo?
 - e. que hay de su kurtosis?
 
-##  **1\. DESAPARICIONES**
+###  1\. DESAPARICIONES
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.1_desapariciones.png)
 
 *  **Parámetros Estadísticos:**
@@ -1219,7 +1219,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   *  **Curtosis (1.8684):** Un valor de curtosis positivo (mayor que 0 para una distribución normal o, a veces, mayor que 3 si se compara con la curtosis de una normal que es 3\) indica una distribución **leptocúrtica**. Esto significa que la distribución tiene un pico más agudo y colas más pesadas (más outliers) de lo que tendría una distribución normal. En este caso, el pico se ve en los adolescentes y adultos jóvenes, y las colas se extienden.
 
 
-## **Histograma de Desapariciones:**
+##### **Histograma de Desapariciones:**
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.2_desapariciones.png)
 
   *  Visualmente confirma la moda alrededor de los 15-19 años.
@@ -1231,7 +1231,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   *  El grupo 0-4 años también tiene una frecuencia notable.
 
 
-* ## **Boxplot de Edades (Desapariciones) \- (No proporcionado, pero podemos inferir):**
+* ##### **Boxplot de Edades (Desapariciones) \- (No proporcionado, pero podemos inferir):**
 
 ![Desapariciones](C:/Datos_limpios/ImagenesProblematica/12.3_desapariciones.png)
 
@@ -1244,7 +1244,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   *  Se observan varios puntos **outliers** (representados por los puntos rojos) por encima del bigote superior, indicando víctimas de desaparición en edades significativamente mayores, que van desde los **70 años hasta cerca de los 100 años**. Esto confirma la presencia de una cola derecha en la distribución de edades para este delito y la asimetría positiva previamente mencionada.
 
 
-## **2\. HOMICIDIOS**
+### 2\. HOMICIDIOS
 
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/12.1_homicidios.png)
 
@@ -1269,7 +1269,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   * **Curtosis (2.3931):** Distribución leptocúrtica, con un pico más pronunciado y colas más pesadas que una normal.
 
 
-* ## **Histograma de Homicidios:**
+* #### **Histograma de Homicidios:**
 
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/12.2_homicidios.png)
 
@@ -1282,7 +1282,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   *  El grupo 0-4 años es significativo.
 
 
-* ## **Boxplot de Edades Homicidios (Proporcionado):**
+* #### **Boxplot de Edades Homicidios (Proporcionado):**
 
 ![Homicidios](C:/Datos_limpios/ImagenesProblematica/12.3_homicidios.png)
 
@@ -1294,7 +1294,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
 
 
 
-## **3\. RECLUTAMIENTOS**
+### 3\. RECLUTAMIENTOS
 
 
 ![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/12.1_reclutamiento.png)
@@ -1320,7 +1320,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   *  **Curtosis (42.9454):** Un valor de curtosis extremadamente alto. Esto indica una distribución muy puntiaguda (leptocúrtica) con colas muy pesadas. El pico es muy pronunciado en la adolescencia, y hay outliers significativos.
 
 
-* ## **Histograma de Reclutamientos:**
+* #### **Histograma de Reclutamientos:**
 
 ![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/12.2_reclutamiento.png)
 
@@ -1333,7 +1333,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   *  La fuerte asimetría y curtosis se explican porque la mayoría de los casos están en un rango de edad muy joven, pero existen algunos casos dispersos en edades mayores que "estiran" la cola derecha.
 
 
-* ## **Boxplot de Edades Reclutamiento (Proporcionado):**
+* #### **Boxplot de Edades Reclutamiento (Proporcionado):**
 
 ![Reclutamiento](C:/Datos_limpios/ImagenesProblematica/12.3_reclutamiento.png)
 
@@ -1345,7 +1345,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
 
 
 
-## **4\. SECUESTROS**
+### 4\. SECUESTROS
 
 
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/12.1_secuestros.png)
@@ -1372,7 +1372,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
 
    
 
-* ## **Histograma de Secuestros:**
+* #### **Histograma de Secuestros:**
 
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/12.2_secuestros.png)
 
@@ -1386,7 +1386,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
 
   
 
-* ## **Boxplot de Edades Secuestros (Proporcionado):**
+* #### **Boxplot de Edades Secuestros (Proporcionado):**
 
 ![Secuestros](C:/Datos_limpios/ImagenesProblematica/12.3_secuestros.png)
 
@@ -1398,9 +1398,9 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
 
 
 
-* ## **Resumen y Deducciones Generales:**
+* #### **Resumen y Deducciones Generales:**
 
-* ## **Edades promedio afectadas:**
+* #### **Edades promedio afectadas:**
 
   *  Reclutamiento: \~16 años (la más baja, enfocada en menores)
 
@@ -1411,7 +1411,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   *  Secuestros: \~41-42 años (la más alta, enfocada en adultos)
 
 
-* ## **Dispersión (Varianza/Desv. Estándar/IQR):**
+* #### **Dispersión (Varianza/Desv. Estándar/IQR):**
 
   *  Reclutamiento tiene la menor dispersión (edades muy concentradas).
 
@@ -1420,7 +1420,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   *  Desapariciones y homicidios tienen una dispersión intermedia y similar entre sí.
 
 
-* ## **Forma de la Distribución (Asimetría y Curtosis):**
+* #### **Forma de la Distribución (Asimetría y Curtosis):**
 
   *  **Reclutamiento** es la más distintiva: extremadamente asimétrica a la derecha y muy leptocúrtica, debido al fuerte enfoque en menores con algunos casos atípicos en edades mayores.
 
@@ -1428,7 +1428,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
 
   *  **Secuestros** tiene una asimetría positiva más leve y una curtosis cercana a la de una distribución normal (o ligeramente platicúrtica en su cuerpo principal), pero el repunte en edades muy altas es un rasgo particular.
 
-* ## **Cuartiles (Q1, Q3, IQR):**
+* #### **Cuartiles (Q1, Q3, IQR):**
 
   *  Confirman el fuerte enfoque en **menores de edad para reclutamientos** (el 75% de las víctimas tienen menos de 18 años).
 
@@ -1437,7 +1437,7 @@ ggplot(df_box, aes(x = factor(1), y = age)) +
   *  Para **secuestros**, el 50% central abarca un rango más amplio de la vida adulta (aproximadamente 23-52 años).
 
 
-* ## **Outliers (Cajas de Bigotes):**
+* #### **Outliers (Cajas de Bigotes):**
 
   * **Reclutamiento** es el que presenta la mayor cantidad y la mayor dispersión de outliers en edades avanzadas, lo que es sorprendente y merece una investigación más profunda sobre la naturaleza de esos casos.
 
